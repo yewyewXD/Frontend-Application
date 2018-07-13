@@ -7,4 +7,6 @@ Wenn die Komponenten installiert sind kann die App per:
 
 installiert werden.
 
+Die Aufgabe befindet sich in "/aufgabe"
+
 Viel Erfolg!
