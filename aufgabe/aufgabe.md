@@ -63,4 +63,4 @@ Mögliche Komponenten wären:
 
 
 **Git:**
-Das fertige Dashboard wird bitte in einem Git-Repository abgelegt. Das Git wird uns zur Verfügung gestellt. Wir schauen uns das fertige Produkt an. Vielen Dank!
+Das fertige Dashboard wird bitte in diesem Git-Repository auf der Branch "loesung-{name}" abgelegt, wobei {name} Vorname, Nachname oder Alias sein kann. Das Git wird uns zur Verfügung gestellt. Wir schauen uns das fertige Produkt an. Vielen Dank!
