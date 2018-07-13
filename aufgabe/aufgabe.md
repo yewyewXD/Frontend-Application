@@ -1,12 +1,14 @@
-**Aufgabe**:
+# Aufgabe
 
 Erstelle eine ReactJS-Applikation, die die folgenden Features bereitstellt.
 Es gilt den Rahmen der Aufgabe zu erfüllen. Weitere kreative Ansätze sind natürlich immer erwünscht! 
+
 Der Zeitrahmen der Aufgabe beträgt **eine Woche**.
+
 Gutes Gelingen und viel Spaß beim Basteln!
 
 
-**Beschreibung:**
+# Beschreibung
 
 Es wird ein neues Dashboard gesucht. Deine Aufgabe ist es ein neues Dashboard zu erstellen mit dem der Benutzer seinen Account verwalten kann. Natürlich soll es nun nicht vollständig sein. Wir möchten uns auf einen Ausschnitt beschränken. 
 
@@ -16,8 +18,8 @@ Im ersten Tab (Basisdaten):
 - E-Mail-Adresse ändern
 - Passwort ändern
 - Das Passwort muss bestimmte Eigenschaften erfüllen:
-- Passwort und Passwortwiederholung sind identisch (bitte mit Indikator)
-- Passwort hat: Großbuchstaben, Kleinbuchstaben, Zahlen und Sonderzeichen (bitte auch mit Indikator, mehrere Farben für die Passwortstärke wären optimal)
+  - Passwort und Passwortwiederholung sind identisch (bitte mit Indikator)
+  - Passwort hat: Großbuchstaben, Kleinbuchstaben, Zahlen und Sonderzeichen (bitte auch mit Indikator, mehrere Farben für die Passwortstärke wären optimal)
 - Button zum Aktualisieren der Benutzerdaten
 
 Im zweiten Tab (Anschrift):
@@ -30,7 +32,7 @@ Im zweiten Tab (Anschrift):
 Wichtig ist das der Benutzer ein Feedback bekommt, wenn seine Eingaben nicht stimmen, stimmen, seine Daten nicht gespeichert wurden und seine Daten erfolgreich gespeichert wurden.
 
 
-**Layout:**
+# Layout
 
 Als Grundlage soll Twitters Bootstrap Framework verwendet werden. Header und Footer können in Bootstrap Templates gefunden werden.
 
@@ -43,7 +45,7 @@ der style.css Verwendung finden.
 Ein Layout ist hier zu finden: layoutskizze.jpg
 
 
-**Codestruktur:**
+# Codestruktur
 
 Die Applikation nutzt bitte folgende Features:
 
@@ -63,6 +65,6 @@ Mögliche Komponenten wären:
 - Aside
 
 
-**Git:**
+# Git
 
 Das fertige Dashboard wird bitte in diesem Git-Repository auf der Branch "loesung-{name}" abgelegt, wobei {name} Vorname, Nachname oder Alias sein kann. Das Git wird uns zur Verfügung gestellt. Wir schauen uns das fertige Produkt an. Vielen Dank!
