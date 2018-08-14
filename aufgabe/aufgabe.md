@@ -1,4 +1,6 @@
-# Aufgabe
+#English version below
+
+#Aufgabe
 
 Erstelle eine ReactJS-Applikation, die die folgenden Features bereitstellt.
 Es gilt den Rahmen der Aufgabe zu erfüllen. Weitere kreative Ansätze sind natürlich immer erwünscht! 
@@ -68,3 +70,76 @@ Mögliche Komponenten wären:
 # Git
 
 Das fertige Dashboard wird bitte in diesem Git-Repository auf der Branch "loesung-{name}" abgelegt, wobei {name} Vorname, Nachname oder Alias sein kann. Das Git wird uns zur Verfügung gestellt. Wir schauen uns das fertige Produkt an. Vielen Dank!
+
+-----------------------------------------------------------------
+
+# Task
+
+Create a ReactJS application that provides the following features.
+The framework of the task must be fulfilled. Further creative approaches are of course always desired! 
+
+The time frame of the task is **one week**.
+
+Good luck and have fun with handicrafts!
+
+
+# Description
+
+You are looking for a new dashboard. Your task is to create a new dashboard with which the user can manage his account. Of course, it is not supposed to be complete. We would like to limit ourselves to just one excerpt. 
+
+In this scenario, the form for changing user data is to be created. The user has called this page in the previous step and wants to be able to do the following:
+
+In the first tab (basic data):
+- Change e-mail address
+- Change Password
+- The password must have certain properties:
+  - Password and password repetition are identical (please with indicator)
+  - password: Uppercase letters, lowercase letters, numbers and special characters (also with indicator, several colors for the password strength would be optimal)
+- Button to update the user data
+
+In the second tab (Address):
+- Change first name
+- Change Last Name
+- Change address (street, house number, postal code)
+- Change country (Germany, Austria, Switzerland are available)
+- Button to update the user data
+
+It is important that the user receives feedback if his input is incorrect, correct, his data has not been saved and his data has been successfully saved.
+
+
+# Layout
+
+Twitter's bootstrap framework will be used as a basis. Headers and footers can be found in bootstrap templates.
+
+For the actual page content, it would be nice if the block "User" had the column width "col-xl-2", "Tabs with form" the column width "col-xl-6" and "Aside" the column width "col-xl-4".
+
+Please note that this dashboard also works mobile (on tablets as well as on smartphones)
+When styling, you can decide for yourself what it should look like. However, bonus points are awarded if the colors from
+of the style.css. 
+ 
+A layout can be found here: layoutskizze.jpg
+
+
+# Code structure
+
+The application uses the following features:
+
+- React.js
+- Babel
+- For CSS please use a pre-compiler(SASS, LESS, SCSS)
+
+In React.js, the application is to be assembled into suitable, recyclable React components.
+
+Ideally, the components are provided as export classes.
+
+Possible components would be:
+- header
+- footer
+- user
+- UserInputTabs
+- azide
+
+
+# Git
+
+The finished dashboard is stored in this git repository on the branch "solution-{name}", where {name} can be first name, last name or alias. The git is made available to us. We look at the finished product. Thank you very much!
