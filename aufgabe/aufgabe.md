@@ -72,6 +72,7 @@ Mögliche Komponenten wären:
 Das fertige Dashboard wird bitte in diesem Git-Repository auf der Branch "loesung-{name}" abgelegt, wobei {name} Vorname, Nachname oder Alias sein kann. Das Git wird uns zur Verfügung gestellt. Wir schauen uns das fertige Produkt an. Vielen Dank!
 
 -----------------------------------------------------------------
+#English verison
 
 # Task
 
