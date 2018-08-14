@@ -10,3 +10,16 @@ installiert werden.
 Die Aufgabe befindet sich in "/aufgabe"
 
 Viel Erfolg!
+
+# Innoloft Frontend Application
+
+Node.Js and Yarn are required to install the application challenge.
+Once the components are installed, the app can be downloaded via:
+
+**yarn install**
+
+can be installed.
+
+The task is located in "/aufgabe".
+
+Good luck!
