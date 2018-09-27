@@ -1,6 +1,6 @@
-#English version below
+### English version below
 
-#Aufgabe
+# Aufgabe
 
 Erstelle eine ReactJS-Applikation, die die folgenden Features bereitstellt.
 Es gilt den Rahmen der Aufgabe zu erfüllen. Weitere kreative Ansätze sind natürlich immer erwünscht! 
@@ -72,7 +72,7 @@ Mögliche Komponenten wären:
 - Aside
 
 -----------------------------------------------------------------
-#English verison
+### English verison
 
 # Task
 
