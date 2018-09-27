@@ -10,6 +10,11 @@ Der Zeitrahmen der Aufgabe beträgt **eine Woche**.
 Gutes Gelingen und viel Spaß beim Basteln!
 
 
+# Git
+
+Bitte zuerst das Repository forken und anschließend die Lösungen im eigenen Repository hochladen. Das Git wird uns zur Verfügung gestellt. Wir schauen uns das fertige Produkt an. Vielen Dank!
+
+
 # Beschreibung
 
 Es wird ein neues Dashboard gesucht. Deine Aufgabe ist es ein neues Dashboard zu erstellen mit dem der Benutzer seinen Account verwalten kann. Natürlich soll es nun nicht vollständig sein. Wir möchten uns auf einen Ausschnitt beschränken. 
@@ -66,11 +71,6 @@ Mögliche Komponenten wären:
 - UserInputTabs
 - Aside
 
-
-# Git
-
-Bitte zuerst das Repository forken und anschließend die Lösungen im eigenen Repository hochladen. Das Git wird uns zur Verfügung gestellt. Wir schauen uns das fertige Produkt an. Vielen Dank!
-
 -----------------------------------------------------------------
 #English verison
 
@@ -82,6 +82,11 @@ The framework of the task must be fulfilled. Further creative approaches are of 
 The time frame of the task is **one week**.
 
 Good luck and have fun with handicrafts!
+
+
+# Git
+
+Just fork the repository and add your solutions to your fork. The git is made available to us. We look at the finished product. Thank you very much!
 
 
 # Description
@@ -139,8 +144,3 @@ Possible components would be:
 - user
 - UserInputTabs
 - azide
-
-
-# Git
-
-Just fork the repository and add your solutions to your fork. The git is made available to us. We look at the finished product. Thank you very much!
