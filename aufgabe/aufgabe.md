@@ -69,7 +69,7 @@ Mögliche Komponenten wären:
 
 # Git
 
-Das fertige Dashboard wird bitte in diesem Git-Repository auf der Branch "loesung-{name}" abgelegt, wobei {name} Vorname, Nachname oder Alias sein kann. Das Git wird uns zur Verfügung gestellt. Wir schauen uns das fertige Produkt an. Vielen Dank!
+Bitte zuerst das Repository forken und anschließend die Lösungen im eigenen Repository hochladen. Das Git wird uns zur Verfügung gestellt. Wir schauen uns das fertige Produkt an. Vielen Dank!
 
 -----------------------------------------------------------------
 #English verison
@@ -143,4 +143,4 @@ Possible components would be:
 
 # Git
 
-The finished dashboard is stored in this git repository on the branch "solution-{name}", where {name} can be first name, last name or alias. The git is made available to us. We look at the finished product. Thank you very much!
+Just fork the repository and add your solutions to your fork. The git is made available to us. We look at the finished product. Thank you very much!
