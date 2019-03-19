@@ -77,7 +77,7 @@ Mögliche Komponenten wären:
 - Aside
 
 -----------------------------------------------------------------
-### English verison
+### English version
 
 # Task
 
