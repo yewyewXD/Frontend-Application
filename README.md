@@ -56,7 +56,7 @@ A layout mockup can be found in the file: [mockup.jpg](https://gitlab.com/innolo
 
 The application should at the very least use the following:
 
-- It uses the React.js framework
+- React.js framework
 - A CSS pre-compiler (SASS, LESS, SCSS) or other CSS approaches (CSS modules, Styled components)
 
 You can use external modules like [Redux](https://redux.js.org), [informed](https://joepuzzo.github.io/informed/), and whatever you think is necessary.
@@ -73,5 +73,6 @@ Possible components would be:
 
 It is however up to you to provide the structure you think works best in a production-level app.
 
+Bonus points would be awarded for setting up and using linters.
 
 Thank you, and have fun!
