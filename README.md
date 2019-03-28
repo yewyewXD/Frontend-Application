@@ -1,6 +1,6 @@
 # Task
 
-Create a ReactJS application that provides the features described in this document.
+Create a [React](https://reactjs.org) application that provides the features described in this document.
 The basic requests of the task must be fulfilled. Further creative approaches are of course always desired and a great bonus.
 
 Good luck and have fun!
@@ -26,8 +26,9 @@ In the first tab (basic data):
 - Change e-mail address
 - Change Password
 - The password must have certain properties:
-  - Password and password repetition are identical (please with indicator)
-  - password: Uppercase letters, lowercase letters, numbers and special characters (also with indicator, several colors for the password strength would be optimal)
+  - "Password" and "Password repeat" fields need to be identical (including an indicator for this equality)
+  - The password field should accept Uppercase letters, lowercase letters, numbers and special characters
+  - A multi-color password strength indicator should be implemented
 - Button to update the user data
 
 In the second tab (Address):
@@ -42,25 +43,25 @@ It is important that the user receives feedback if his input is incorrect, corre
 
 # Layout
 
-You can use Bootstrap framework or other framework, or of course you could just build your own custom frontend styles.
+You can use Bootstrap framework or other CSS frameworks, or of course you could just build your own custom frontend styles, or a mix of the two approaches.
 
 Please note that this dashboard should also works mobile (on tablets as well as on smartphones).
 
 When styling, you can decide for yourself what it should look like.
-However, bonus points are awarded if the styles resemble those of energieloft.de and could fit as seamlessly as possible within that website..
+However, bonus points are awarded if the styles resemble those of [energieloft.de](https://energieloft.de) and could fit as seamlessly as possible within that website..
 
-A layout mockup can be found in the file: layoutskizze.jpg
+A layout mockup can be found in the file: mockup.jpg
 
 # Code structure
 
-The starter application uses the following features:
+The application should at the very least use the following:
 
-- React.js
-- A CSS pre-compiler (SASS, LESS, SCSS)
+- It uses the React.js framework
+- A CSS pre-compiler (SASS, LESS, SCSS) or other CSS approaches (CSS modules, Styled components)
 
-In React.js, the application is to be assembled into suitable, recyclable React components.
+You can use external modules like [Redux](https://redux.js.org), [informed](https://joepuzzo.github.io/informed/), and whatever you think is necessary.
 
-Ideally, the components are provided as export classes.
+In React, the application is to be assembled into suitable, reusable React components.
 
 Possible components would be:
 
@@ -70,8 +71,7 @@ Possible components would be:
 - UserInputTabs
 - Aside
 
-It is however up to you to provide the structure you think works best.
+It is however up to you to provide the structure you think works best in a production-level app.
 
-You can use external modules like [Redux](https://redux.js.org), [informed](https://joepuzzo.github.io/informed/), and whatever you think is necessary.
 
 Thank you, and have fun!
