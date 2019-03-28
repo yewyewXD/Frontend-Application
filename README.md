@@ -7,7 +7,7 @@ Good luck and have fun!
 
 # Setting up the project
 
-You can use [create-react-app](https://facebook.github.io/create-react-app/) in order to kickstart your assignment. If you prefer, you can setup Webpack yourself as well.
+You can use [create-react-app](https://facebook.github.io/create-react-app/) in order to kickstart your assignment. If you prefer, you can setup [webpack](https://webpack.github.io) yourself as well.
 
 # Git
 
