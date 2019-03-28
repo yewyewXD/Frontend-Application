@@ -50,7 +50,7 @@ Please note that this dashboard should also works mobile (on tablets as well as 
 When styling, you can decide for yourself what it should look like.
 However, bonus points are awarded if the styles resemble those of [energieloft.de](https://energieloft.de) and could fit as seamlessly as possible within that website..
 
-A layout mockup can be found in the file: mockup.jpg
+A layout mockup can be found in the file: [mockup.jpg](https://gitlab.com/innoloft/innoloft_frontend_application/blob/master/mockup.jpg)
 
 # Code structure
 
