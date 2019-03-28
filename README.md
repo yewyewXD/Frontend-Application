@@ -43,12 +43,13 @@ It is important that the user receives feedback if his input is incorrect, corre
 
 # Layout
 
-You can use Bootstrap framework or other CSS frameworks, or of course you could just build your own custom frontend styles, or a mix of the two approaches.
+You can use Bootstrap framework or other CSS frameworks if you want, or of course you could just build your own custom frontend styles, or a mix of the two approaches.
 
-Please note that this dashboard should also works mobile (on tablets as well as on smartphones).
+Please note that this dashboard should be responsive, and be usable on mobile and tablets as well.
 
-When styling, you can decide for yourself what it should look like.
-However, bonus points are awarded if the styles resemble those of [energieloft.de](https://energieloft.de) and could fit as seamlessly as possible within that website..
+When styling, you can decide for yourself what this dashboard should look like.
+
+However, bonus points are awarded if the styles resemble those of [energieloft.de](https://energieloft.de) and could fit as seamlessly as possible within that website.
 
 A layout mockup can be found in the file: [mockup.jpg](https://gitlab.com/innoloft/innoloft_frontend_application/blob/master/mockup.jpg)
 
