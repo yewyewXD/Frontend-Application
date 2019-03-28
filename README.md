@@ -76,4 +76,8 @@ It is however up to you to provide the structure you think works best in a produ
 
 Bonus points would be awarded for setting up and using linters.
 
+# Deadline
+
+You have a week to work on this project, just note down in the end how many hours it took to complete (roughly), as this can be an interesting matter of discussion.
+
 Thank you, and have fun!
