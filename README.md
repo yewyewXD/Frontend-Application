@@ -19,8 +19,8 @@ Just fork the repository and add your solutions to your fork, so that we can hav
 You are developing a new dashboard. Your task is to create a new dashboard with which the user can manage his account.
 Of course, it is not supposed to be complete. We would like to limit ourselves to just one excerpt.
 
-In this scenario, the form user for modifying user data has to be created. 
-The form contains two tabs, as specified below.
+In this scenario, the form used to modify the user profile information has to be created. 
+The form contains two tabs, as specified below and shown in the mockup.
 
 The user wants to be able to switch between the two tabs and to enter the following information:
 
@@ -42,19 +42,23 @@ In the second tab (Address):
 - Change country (Germany, Austria, Switzerland are available)
 - Button to update the user data
 
-It is important that the user receives feedback if his input is incorrect, correct, his data has not been saved and his data has been successfully saved with a fake AJAX call.
+The form also needs a button to submit the information through a fake AJAX call.
+
+It is important that the user receives feedback if his input is incorrect, correct, his data has not been saved and his data has been successfully saved.
+
+The layout also contains a header and a sidebar, which are not functioning in this test.
 
 # Layout
 
 Please do not use Bootsrap or similar frameworks for CSS, just create new CSS from scratch.
 
-Please note that this dashboard should be responsive, and be usable on mobile and tablets as well.
+Please note that this dashboard should be responsive, and **be usable on mobile and tablets** as well.
 
 When styling, you can decide for yourself what this dashboard should look like.
 
 However, bonus points are awarded if the styles resemble those of [energieloft.de](https://energieloft.de) and could fit as seamlessly as possible within that website.
 
-A basic layout mockup can be found in the file: [mockup.jpg](https://gitlab.com/innoloft/innoloft_frontend_application/blob/master/mockup.jpg)
+A basic layout mockup can be found in the file: [mockup.jpg](https://gitlab.com/innoloft/innoloft_frontend_application/blob/master/mockup.jpg). 
 
 # Code structure
 
