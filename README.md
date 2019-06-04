@@ -19,7 +19,10 @@ Just fork the repository and add your solutions to your fork, so that we can hav
 You are developing a new dashboard. Your task is to create a new dashboard with which the user can manage his account.
 Of course, it is not supposed to be complete. We would like to limit ourselves to just one excerpt.
 
-In this scenario, the form for changing user data is to be created. The user has called this page in the previous step and wants to be able to do the following:
+In this scenario, the form user for modifying user data has to be created. 
+The form contains two tabs, as specified below.
+
+The user wants to be able to switch between the two tabs and to enter the following information:
 
 In the first tab (basic data):
 
@@ -39,11 +42,11 @@ In the second tab (Address):
 - Change country (Germany, Austria, Switzerland are available)
 - Button to update the user data
 
-It is important that the user receives feedback if his input is incorrect, correct, his data has not been saved and his data has been successfully saved.
+It is important that the user receives feedback if his input is incorrect, correct, his data has not been saved and his data has been successfully saved with a fake AJAX call.
 
 # Layout
 
-You can use Bootstrap framework or other CSS frameworks if you want, or of course you could just build your own custom frontend styles, or a mix of the two approaches.
+Please do not use Bootsrap or similar frameworks for CSS, just create new CSS from scratch.
 
 Please note that this dashboard should be responsive, and be usable on mobile and tablets as well.
 
@@ -51,7 +54,7 @@ When styling, you can decide for yourself what this dashboard should look like.
 
 However, bonus points are awarded if the styles resemble those of [energieloft.de](https://energieloft.de) and could fit as seamlessly as possible within that website.
 
-A layout mockup can be found in the file: [mockup.jpg](https://gitlab.com/innoloft/innoloft_frontend_application/blob/master/mockup.jpg)
+A basic layout mockup can be found in the file: [mockup.jpg](https://gitlab.com/innoloft/innoloft_frontend_application/blob/master/mockup.jpg)
 
 # Code structure
 
