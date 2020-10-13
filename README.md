@@ -7,7 +7,9 @@ Good luck and have fun!
 
 # Submitting
 
-Just fork the repository and add your solutions to your fork, so that we can have a look at your work. Afterwards create a merge/pull request. Thank you very much!
+Just fork the repository and add your solutions to your fork, so that we can have a look at your work. Afterwards create a merge/pull request.  
+Please also note down in the end how many hours it took to complete (roughly), as this can be an interesting matter of discussion.  
+Thank you very much!
 
 # Setting up the project
 
@@ -80,9 +82,3 @@ Possible components would be:
 It is however up to you to provide the structure you think works best in a production-level app.
 
 Bonus points would be awarded for setting up and using linters.
-
-# Deadline
-
-You have a week to work on this project, just note down in the end how many hours it took to complete (roughly), as this can be an interesting matter of discussion.
-
-Thank you, and have fun!
