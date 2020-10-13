@@ -57,7 +57,7 @@ Please do not use Bootsrap or similar frameworks for CSS, just create new CSS fr
 
 Please note that this dashboard should be responsive, and **be usable on mobile and tablets** as well.
 
-When styling, you can decide for yourself what this dashboard should look like.
+When styling, you can decide for yourself what this dashboard should look like, make it look as nice as you can.
 
 However, bonus points are awarded if the styles resemble those of [innoloft.com](https://innoloft.com/home) and could fit as seamlessly as possible within that website.
 
@@ -67,8 +67,9 @@ The application should at the very least use the following:
 
 - React.js framework
 - A CSS pre-compiler (SASS, LESS, SCSS) or other CSS approaches (CSS modules, Styled components)
+- Redux
 
-You can use external modules like [Redux](https://redux.js.org), [informed](https://joepuzzo.github.io/informed/), and whatever you think is necessary.
+You can use external modules like [informed](https://joepuzzo.github.io/informed/), [formik](https://jaredpalmer.com/formik/), and whatever you think is necessary.
 
 In React, the application is to be assembled into suitable, reusable React components.
 
@@ -82,4 +83,4 @@ Possible components would be:
 
 It is however up to you to provide the structure you think works best in a production-level app.
 
-Bonus points would be awarded for setting up and using linters.
+Bonus points would be awarded for setting up and using linters (eslint, stylelint) and Prettier.
