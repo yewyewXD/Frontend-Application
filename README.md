@@ -56,9 +56,7 @@ Please note that this dashboard should be responsive, and **be usable on mobile 
 
 When styling, you can decide for yourself what this dashboard should look like.
 
-However, bonus points are awarded if the styles resemble those of [energieloft.de](https://energieloft.de) and could fit as seamlessly as possible within that website.
-
-A basic layout mockup can be found in the file: [mockup.jpg](https://gitlab.com/innoloft/innoloft_frontend_application/blob/master/mockup.jpg). 
+However, bonus points are awarded if the styles resemble those of [innoloft.com](https://innoloft.com/home) and could fit as seamlessly as possible within that website.
 
 # Code structure
 
