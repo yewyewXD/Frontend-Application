@@ -1,6 +1,3 @@
-> :warning: **Currently not accepting any applications for this position**: We stopped accepting applications for this position for the moment. Our plans are to start recruiting again from July. Please keep that in mind, in case you are interested and want to apply.
-
-
 # Task
 
 Create a [React](https://reactjs.org) application that provides the features described in this document.
