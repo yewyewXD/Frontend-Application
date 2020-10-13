@@ -12,7 +12,7 @@ If you prefer, you can setup [webpack](https://webpack.github.io) yourself as we
 
 # Git
 
-Just fork the repository and add your solutions to your fork, so that we can have a look at your work. Thank you very much!
+Just fork the repository and add your solutions to your fork, so that we can have a look at your work. Afterwards create a merge/pull request. Thank you very much!
 
 # Description
 
