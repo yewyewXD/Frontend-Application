@@ -24,7 +24,7 @@ The form contains two tabs, as specified below and shown in the mockup.
 
 The user wants to be able to switch between the two tabs and to enter the following information:
 
-In the first tab (basic data):
+In the first tab (Account Settings):
 
 - Change e-mail address
 - Change Password
@@ -34,7 +34,7 @@ In the first tab (basic data):
   - A multi-color password strength indicator should be implemented
 - Button to update the user data
 
-In the second tab (Address):
+In the second tab (User Information):
 
 - Change first name
 - Change Last Name
