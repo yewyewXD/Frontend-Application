@@ -5,14 +5,14 @@ The basic requests of the task must be fulfilled. Further creative approaches ar
 
 Good luck and have fun!
 
+# Submitting
+
+Just fork the repository and add your solutions to your fork, so that we can have a look at your work. Afterwards create a merge/pull request. Thank you very much!
+
 # Setting up the project
 
 You can use [create-react-app](https://facebook.github.io/create-react-app/) in order to kickstart your assignment. 
 If you prefer, you can setup [webpack](https://webpack.github.io) yourself as well, or use [Parcel](https://parceljs.org).
-
-# Git
-
-Just fork the repository and add your solutions to your fork, so that we can have a look at your work. Afterwards create a merge/pull request. Thank you very much!
 
 # Description
 
