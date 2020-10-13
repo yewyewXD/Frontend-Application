@@ -31,7 +31,7 @@ In the first tab (Account Settings):
 - The password must have certain properties:
   - "Password" and "Password repeat" fields need to be identical (including an indicator for this equality)
   - The password field should accept Uppercase letters, lowercase letters, numbers and special characters
-  - A multi-color password strength indicator should be implemented
+  - A password strength indicator should be implemented
 - Button to update the user data
 
 In the second tab (User Information):
