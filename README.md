@@ -9,6 +9,7 @@ Good luck and have fun!
 
 Just fork the repository and add your solutions to your fork, so that we can have a look at your work. Afterwards create a merge/pull request. 
 Please also note down in the end how many hours it took to complete (roughly), as this can be an interesting matter of discussion.  
+  
 Thank you very much!
 
 # Setting up the project
