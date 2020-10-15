@@ -2,14 +2,15 @@
   margin-top: 5rem;
   .dashboard-container {
     display: flex;
+    justify-content: flex-end;
     margin: 0 13rem;
   }
 
   .dashboard-sidebar {
-    width: 19%;
-    background: black;
-    height: 87vh;
-    position: sticky;
+    width: 16%;
+    height: 88vh;
+    position: fixed;
+    left: 13rem;
   }
 
   .dashboard-main {
