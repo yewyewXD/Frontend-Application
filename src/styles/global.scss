@@ -1,0 +1,16 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.all-center,
+.all-center-column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.all-center-column {
+  flex-direction: column;
+}

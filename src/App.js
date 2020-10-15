@@ -1,5 +1,5 @@
 import React from "react";
-import "./App.css";
+import "./styles/AppStyles.scss";
 import { connect } from "react-redux";
 import { updateAccountInfo, updateUserInfo } from "./redux/actions/UserProfile";
 
@@ -17,6 +17,11 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps, { updateAccountInfo, updateUserInfo })(
-  App
-);
+const mapDispatchToProps = (dispatch) => {
+  return {
+    updateAccountInfo: () => dispatch(updateAccountInfo()),
+    updateUserInfo: () => dispatch(updateUserInfo()),
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
