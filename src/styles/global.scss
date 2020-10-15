@@ -23,3 +23,22 @@ body {
 .theme {
   color: $themeColor;
 }
+
+.btn {
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.btn-primary {
+  background: $themeColor;
+  color: white;
+}
+
+.btn-sm {
+  font-size: 14px;
+  padding: 5px 10px;
+}
