@@ -16,8 +16,10 @@ function App(props) {
       <main className="dashboard">
         <div className="dashboard-container">
           <Sidebar />
-          <Feed />
-          <News />
+          <div className="dashboard-main">
+            <Feed />
+            <News />
+          </div>
         </div>
       </main>
     </>

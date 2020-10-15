@@ -1,21 +1,27 @@
 .dashboard {
   margin-top: 5rem;
-  padding: 0 13rem;
   .dashboard-container {
     display: flex;
-    margin: 0 auto;
+    margin: 0 13rem;
   }
 
   .dashboard-sidebar {
     width: 19%;
+    background: black;
+    height: 87vh;
+    position: sticky;
   }
 
-  .dashboard-feed {
-    width: 49%;
-    margin: 0 30px;
-  }
+  .dashboard-main {
+    width: 79%;
+    display: flex;
+    .dashboard-feed {
+      width: 60%;
+      padding: 0 30px;
+    }
 
-  .dashboard-news {
-    width: 26%;
+    .dashboard-news {
+      width: 33%;
+    }
   }
 }
