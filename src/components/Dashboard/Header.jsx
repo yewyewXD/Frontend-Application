@@ -4,24 +4,25 @@ import logo from "../../images/innoloft_white_logo.svg";
 
 const Navbar = styled.nav`
   position: fixed;
-  left: 0;
   top: 0;
+  left: 0;
+  right: 0;
   width: 100%;
-  padding: 0.5rem 13rem;
 `;
 
 const NavbarContainer = styled.div`
   display: flex;
   margin: 0 auto;
+  padding: 0.5rem 13rem;
 `;
 
 const NavbarBrand = styled.a`
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  width: 13%;
+  width: 19%;
   img {
-    width: 57%;
+    width: 50%;
   }
 `;
 
@@ -34,11 +35,11 @@ const NavbarToggler = styled.button`
 `;
 
 const NavSearch = styled.form`
-  width: 38%;
+  width: 49%;
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  margin: 0 3rem;
+  margin: 0 30px;
 
   input {
     padding: 0.4rem 0.6rem;
@@ -63,7 +64,7 @@ const NavbarNav = styled.div`
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  width: 19%;
+  width: 26.5%;
   background: white;
 
   .language-toggler,
