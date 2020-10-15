@@ -1,3 +1,5 @@
+@import "./variables.scss";
+
 body {
   margin: 0;
   padding: 0;
@@ -13,4 +15,12 @@ body {
 
 .all-center-column {
   flex-direction: column;
+}
+
+.bg-theme {
+  background-color: $themeColor;
+}
+
+.theme {
+  color: $themeColor;
 }
