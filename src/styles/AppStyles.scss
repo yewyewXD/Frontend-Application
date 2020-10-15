@@ -1,0 +1,21 @@
+.dashboard {
+  margin-top: 4.5rem;
+  padding-left: 13rem;
+  .dashboard-container {
+    display: flex;
+    margin: 0 auto;
+  }
+
+  .dashboard-sidebar {
+    width: 13%;
+  }
+
+  .dashboard-feed {
+    width: 38%;
+    margin: 0 3rem;
+  }
+
+  .dashboard-news {
+    width: 19%;
+  }
+}

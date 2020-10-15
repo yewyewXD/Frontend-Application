@@ -1,19 +1,26 @@
 import React from "react";
 import "./styles/AppStyles.scss";
+import "./styles/global.scss";
 import { connect } from "react-redux";
 import { updateAccountInfo, updateUserInfo } from "./redux/actions/UserProfile";
+import Header from "./components/Dashboard/Header";
+import Sidebar from "./components/Dashboard/Sidebar";
+import Feed from "./components/Dashboard/Feed";
+import News from "./components/Dashboard/News";
 
 function App(props) {
   return (
-    <div className="App">
-      <h1>hi from app {props.email}</h1>
-      <h2>hi from {props.address}</h2>
-      <button
-        onClick={() => props.updateAccountInfo("email@mail.com", "email")}
-      >
-        change
-      </button>
-    </div>
+    <>
+      <Header />
+
+      <main className="dashboard">
+        <div className="dashboard-container">
+          <Sidebar />
+          <Feed />
+          <News />
+        </div>
+      </main>
+    </>
   );
 }
 
