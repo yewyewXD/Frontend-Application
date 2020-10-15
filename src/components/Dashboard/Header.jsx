@@ -1,78 +1,111 @@
 import React from "react";
 import styled from "styled-components";
+import logo from "../../images/innoloft_white_logo.svg";
 
 const Navbar = styled.nav`
   position: fixed;
   left: 0;
   top: 0;
   width: 100%;
-  height: 5.5rem;
+  padding: 0.5rem 13rem;
+`;
 
-  @media (min-width: 1200px) {
-    .navbar-brand {
-      width: 28rem;
-    }
+const NavbarContainer = styled.div`
+  display: flex;
+  margin: 0 auto;
+`;
+
+const NavbarBrand = styled.a`
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 13%;
+  img {
+    width: 57%;
   }
 `;
 
-const NavbarContainer = styled.nav`
+const NavbarToggler = styled.button`
+  display: none;
+
+  @media (max-width: 1024px) {
+    display: flex;
+  }
+`;
+
+const NavSearch = styled.form`
+  width: 38%;
   display: flex;
-  justify-content: space-between;
-  align-items: stretch;
-  max-width: 148rem;
-  height: 5.5rem;
-  margin: 0 auto;
-  padding: 0 2rem;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0 3rem;
+
+  input {
+    padding: 0.4rem 0.6rem;
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  button {
+    position: absolute;
+    margin-right: 1rem;
+  }
+`;
+
+const NavSearchContainer = styled.div`
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+`;
+
+const NavbarNav = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 19%;
+  background: white;
+
+  .language-toggler,
+  .notification,
+  .profile {
+    width: 30%;
+    color: white;
+  }
 `;
 
 export default function Header() {
   return (
-    <Navbar>
-      <NavbarContainer>
-        <a class="navbar-brand" href="/">
-          Navbar
-        </a>
-        <button class="navbar-toggler" type="button">
+    <Navbar className="navbar bg-theme">
+      <NavbarContainer className="navbar-container">
+        <NavbarToggler className="navbar-toggler" type="button">
           button
-        </button>
-        <div class="navbar-collapse">
-          <form class="form-inline my-2 my-lg-0">
+        </NavbarToggler>
+
+        <NavbarBrand className="navbar-brand" href="/">
+          <img src={logo} alt="" />
+        </NavbarBrand>
+
+        <NavSearch className="nav-search">
+          <NavSearchContainer className="nav-search-container">
             <input
               class="form-control mr-sm-2"
               type="text"
-              placeholder="Search"
+              placeholder="Enter interests, keywords, company name, etc..."
             />
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+            <button class="search-btn" type="submit">
               Search
             </button>
-          </form>
+          </NavSearchContainer>
+        </NavSearch>
 
-          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="/">
-                Dropdown
-              </a>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="/">
-                  Action 1
-                </a>
-                <a class="dropdown-item" href="/">
-                  Action 2
-                </a>
-              </div>
-            </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="/">
-                Home
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/">
-                Link
-              </a>
-            </li>
-          </ul>
-        </div>
+        <NavbarNav className="navbar-nav">
+          <div className="language-toggler">lang</div>
+
+          <div className="notification">not</div>
+
+          <div className="profile">pro</div>
+        </NavbarNav>
       </NavbarContainer>
     </Navbar>
   );
