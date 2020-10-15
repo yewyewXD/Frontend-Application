@@ -64,7 +64,7 @@ const NavbarNav = styled.div`
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  width: 26.5%;
+  width: 26%;
   background: white;
 
   .language-toggler,
