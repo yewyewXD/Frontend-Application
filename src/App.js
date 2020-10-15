@@ -1,12 +1,22 @@
 import React from "react";
 import "./App.css";
+import { connect } from "react-redux";
+import { updateAccountInfo, updateUserInfo } from "./redux/actions/UserProfile";
 
-function App() {
+function App(props) {
   return (
     <div className="App">
-      <hi>hi from app</hi>
+      <hi>hi from app {props.email}</hi>
     </div>
   );
 }
 
-export default App;
+const mapStateToProps = (state) => {
+  return {
+    email: state.userProfile.email,
+  };
+};
+
+export default connect(mapStateToProps, { updateAccountInfo, updateUserInfo })(
+  App
+);
