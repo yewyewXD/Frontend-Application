@@ -1,15 +1,15 @@
 import { UPDATE_ACCOUNT_INFO, UPDATE_USER_INFO } from "./types";
 
-export function updateAccountInfo() {
+export function updateAccountInfo(email, password) {
   return {
     type: UPDATE_ACCOUNT_INFO,
-    payload: {},
+    payload: { email, password },
   };
 }
 
-export function updateUserInfo() {
+export function updateUserInfo(firstName, lastName, address, country) {
   return {
     type: UPDATE_USER_INFO,
-    payload: {},
+    payload: { firstName, lastName, address, country },
   };
 }
