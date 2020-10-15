@@ -28,7 +28,11 @@ const mapStateToProps = (state) => {
   } = state.userProfile;
   return {
     email,
+    password,
+    firstName,
+    lastName,
     address,
+    country,
   };
 };
 
