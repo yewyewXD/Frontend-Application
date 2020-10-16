@@ -6,6 +6,7 @@ const NewsCard = styled.div`
   border-radius: 5px;
   background: white;
   padding: 20px;
+  box-shadow: lightgrey 0px 0px 5px;
 
   .news-heading {
     font-size: 16px;
