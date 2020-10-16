@@ -60,7 +60,7 @@ const MainCardContent = styled.div`
     background: #f4f4f4;
     &:focus {
       border-bottom: 3px solid #272e71;
-      background: lightgrey;
+      background: #dfdede;
     }
   }
   button {
