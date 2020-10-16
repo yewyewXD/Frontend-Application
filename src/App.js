@@ -5,7 +5,7 @@ import { connect } from "react-redux";
 import { updateAccountInfo, updateUserInfo } from "./redux/actions/UserProfile";
 import Header from "./components/Dashboard/Header";
 import Sidebar from "./components/Dashboard/Sidebar";
-import Feed from "./components/Dashboard/Feed";
+import Main from "./components/Dashboard/Main";
 import News from "./components/Dashboard/News";
 
 function App(props) {
@@ -16,8 +16,8 @@ function App(props) {
       <main className="dashboard">
         <div className="dashboard-container">
           <Sidebar />
-          <div className="dashboard-main">
-            <Feed />
+          <div className="dashboard-main-container">
+            <Main />
             <News />
           </div>
         </div>
