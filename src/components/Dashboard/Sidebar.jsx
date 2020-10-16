@@ -29,7 +29,7 @@ const SidebarProfile = styled.div`
 
 const SidebarLink = styled.a`
   display: block;
-  padding: 15px;
+  padding: 15px 10px;
   transition: 0.3s;
   text-decoration: none;
   color: black;
@@ -46,6 +46,7 @@ const Footer = styled.div`
 
   .footer-copyright {
     margin: 5px 0;
+    font-size: 12px;
   }
 `;
 
@@ -63,7 +64,7 @@ const FooterLinks = styled.div`
 `;
 
 const FooterSocialIcons = styled.div`
-  margin: 5px 0;
+  margin: 10px 0;
   .footer-social-icon {
     margin: 0 5px;
     color: grey;
