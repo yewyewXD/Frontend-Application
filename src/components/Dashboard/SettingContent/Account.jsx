@@ -1,12 +1,15 @@
 import React, { useState } from "react";
+import { connect } from "react-redux";
+import { updateAccountInfo } from "../../../redux/actions/UserProfile";
 
-export default function AccountSetting() {
-  const [email, setEmail] = useState("");
+function AccountSetting(props) {
+  const [email, setEmail] = useState(props.email);
   const [password, setPassword] = useState("");
   const [passwordRepeat, setPasswordRepeat] = useState("");
 
   function submitAccountSetting(e) {
     e.preventDefault();
+    props.updateAccountInfo(email, password);
   }
 
   return (
@@ -51,3 +54,20 @@ export default function AccountSetting() {
     </form>
   );
 }
+
+const mapStateToProps = (state) => {
+  const { email, password } = state.userProfile;
+  return {
+    email,
+    password,
+  };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    updateAccountInfo: (email, password) =>
+      dispatch(updateAccountInfo(email, password)),
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(AccountSetting);

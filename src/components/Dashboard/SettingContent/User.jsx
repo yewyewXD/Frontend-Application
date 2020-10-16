@@ -1,13 +1,16 @@
 import React, { useState } from "react";
+import { connect } from "react-redux";
+import { updateUserInfo } from "../../../redux/actions/UserProfile";
 
-export default function UserSetting() {
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [address, setAddress] = useState("");
-  const [country, setCountry] = useState("");
+function UserSetting(props) {
+  const [firstName, setFirstName] = useState(props.firstName);
+  const [lastName, setLastName] = useState(props.lastName);
+  const [address, setAddress] = useState(props.address);
+  const [country, setCountry] = useState(props.country);
 
   function submitUserSetting(e) {
     e.preventDefault();
+    props.updateUserInfo(firstName, lastName, address, country);
   }
 
   return (
@@ -64,3 +67,22 @@ export default function UserSetting() {
     </form>
   );
 }
+
+const mapStateToProps = (state) => {
+  const { firstName, lastName, address, country } = state.userProfile;
+  return {
+    firstName,
+    lastName,
+    address,
+    country,
+  };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    updateUserInfo: (firstName, lastName, address, country) =>
+      dispatch(updateUserInfo(firstName, lastName, address, country)),
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(UserSetting);
