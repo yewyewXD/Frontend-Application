@@ -66,6 +66,14 @@ const MainCardContent = styled.div`
   button {
     margin-top: 10px;
   }
+
+  .error-message {
+    font-weight: 600;
+    background: #ff8f8f;
+    color: white;
+    padding: 10px;
+    margin-bottom: 24px;
+  }
 `;
 
 export default function Feed() {

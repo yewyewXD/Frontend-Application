@@ -3,18 +3,52 @@ import { connect } from "react-redux";
 import { updateAccountInfo } from "../../../redux/actions/UserProfile";
 
 function AccountSetting(props) {
+  const [errMsg, setErrMsg] = useState("");
   const [email, setEmail] = useState(props.email);
   const [password, setPassword] = useState("");
   const [passwordRepeat, setPasswordRepeat] = useState("");
 
   function submitAccountSetting(e) {
     e.preventDefault();
+    // Validation
+    const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    if (!email || !password || !passwordRepeat) {
+      setErrMsg("Please fill in all fields");
+      clearErrMsg();
+      return;
+    }
+    if (!emailRegex.test(email)) {
+      setErrMsg("Email is invalid");
+      clearErrMsg();
+      return;
+    }
+    if (password !== passwordRepeat) {
+      setErrMsg("Passwords do not match");
+      clearErrMsg();
+      return;
+    }
+    if (email === props.email && password === props.password) {
+      setErrMsg("You did not edit any field");
+      clearErrMsg();
+      return;
+    }
+
     props.updateAccountInfo(email, password);
+    setPassword("");
+    setPasswordRepeat("");
+    alert("success!");
+  }
+
+  function clearErrMsg() {
+    setTimeout(() => {
+      setErrMsg("");
+    }, 3000);
   }
 
   return (
     <form className="account-setting" onSubmit={submitAccountSetting}>
       <div className="form-group">
+        {errMsg && <div className="error-message">{errMsg}</div>}
         <label htmlFor="email" className="form-label">
           <b>Email</b>
         </label>

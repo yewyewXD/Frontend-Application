@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { updateUserInfo } from "../../../redux/actions/UserProfile";
 
 function UserSetting(props) {
+  const [errMsg, setErrMsg] = useState("");
   const [firstName, setFirstName] = useState(props.firstName);
   const [lastName, setLastName] = useState(props.lastName);
   const [address, setAddress] = useState(props.address);
@@ -10,12 +11,37 @@ function UserSetting(props) {
 
   function submitUserSetting(e) {
     e.preventDefault();
+    // Validation
+    if (!firstName || !lastName || !address || !country) {
+      setErrMsg("Please fill in all fields");
+      clearErrMsg();
+      return;
+    }
+    if (
+      firstName === props.firstName &&
+      lastName === props.lastName &&
+      address === props.address &&
+      country === props.country
+    ) {
+      setErrMsg("You did not edit any field");
+      clearErrMsg();
+      return;
+    }
+
     props.updateUserInfo(firstName, lastName, address, country);
+    alert("success");
+  }
+
+  function clearErrMsg() {
+    setTimeout(() => {
+      setErrMsg("");
+    }, 3000);
   }
 
   return (
     <form className="user-setting" onSubmit={submitUserSetting}>
       <div className="form-group">
+        {errMsg && <div className="error-message">{errMsg}</div>}
         <label htmlFor="firstName" className="form-label">
           <b>First Name</b>
         </label>
