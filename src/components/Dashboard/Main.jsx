@@ -19,6 +19,7 @@ const MainCard = styled.div`
 
   .account-setting-tab,
   .user-setting-tab {
+    transition: 0.3s;
     cursor: pointer;
     width: 50%;
     border-radius: 5px 0 0 0;
@@ -38,6 +39,33 @@ const MainCard = styled.div`
   }
 `;
 
+const MainCardContent = styled.div`
+  padding: 30px 25px;
+
+  .form-group {
+    margin-bottom: 24px;
+  }
+  .form-label {
+    display: block;
+    margin-bottom: 7px;
+  }
+  .form-input {
+    font-size: 16px;
+    padding: 10px;
+    width: 60%;
+    border: none;
+    outline: none;
+    background: #f4f4f4;
+    &:focus {
+      border-bottom: 3px solid #272e71;
+      background: lightgrey;
+    }
+  }
+  button {
+    margin-top: 10px;
+  }
+`;
+
 export default function Feed() {
   return (
     <div className="dashboard-main">
@@ -52,6 +80,33 @@ export default function Feed() {
           <div className="account-setting-tab active">Account Setting</div>
           <div className="user-setting-tab">User Setting</div>
         </div>
+
+        <MainCardContent className="main-card-content">
+          <form className="account-setting">
+            <div className="form-group">
+              <label htmlFor="email" className="form-label">
+                <b>Email</b>
+              </label>
+              <input type="text" className="form-input" />
+            </div>
+
+            <div className="form-group">
+              <label htmlFor="password" className="form-label">
+                <b>Password</b>
+              </label>
+              <input type="password" className="form-input" />
+            </div>
+
+            <div className="form-group">
+              <label htmlFor="passwordRepeat" className="form-label">
+                <b>Password Repeat</b>
+              </label>
+              <input type="password" className="form-input" />
+            </div>
+
+            <button className="btn btn-primary btn-md">Save Changes</button>
+          </form>
+        </MainCardContent>
       </MainCard>
     </div>
   );
