@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import profileAvatar from "../../images/avatar.jpg";
+import { FaFacebookF, FaTwitter, FaXing, FaLinkedinIn } from "react-icons/fa";
+import { IoMdExit } from "react-icons/io";
 
 const SidebarContentContainer = styled.div`
   height: 83%;
@@ -18,6 +20,10 @@ const SidebarProfile = styled.div`
     width: 90px;
     border-radius: 50%;
     margin-right: 1rem;
+  }
+
+  .sidebar-profile-icon {
+    margin-right: 5px;
   }
 `;
 
@@ -51,7 +57,7 @@ const FooterLinks = styled.div`
     margin: 3px 7px;
     color: grey;
     &:hover {
-      color: #272e71;
+      color: #272e71; //refactor
     }
   }
 `;
@@ -60,6 +66,10 @@ const FooterSocialIcons = styled.div`
   margin: 5px 0;
   .footer-social-icon {
     margin: 0 5px;
+    color: grey;
+    &:hover {
+      color: #272e71;
+    }
   }
 `;
 
@@ -85,11 +95,16 @@ const footerLinks = [
 ];
 
 const footerSocialIcons = [
-  { icon: "", path: "/" },
-  { icon: "", path: "/" },
-  { icon: "", path: "/" },
-  { icon: "", path: "/" },
-  { icon: "", path: "/" },
+  { icon: <FaFacebookF />, path: "https://www.facebook.com/innoloft/" },
+  { icon: <FaTwitter />, path: "https://twitter.com/innoloft_net" },
+  {
+    icon: <FaXing />,
+    path: "https://www.xing.com/companies/innoloftgmbh%2Fenergieloft",
+  },
+  {
+    icon: <FaLinkedinIn />,
+    path: "https://www.linkedin.com/company/innoloft-gmbh/",
+  },
 ];
 
 export default function Sidebar() {
@@ -99,7 +114,10 @@ export default function Sidebar() {
         <div className="sidebar-content">
           <SidebarProfile className="sidebar-profile">
             <img src={profileAvatar} alt="" />
-            <button className="btn btn-primary btn-sm">Login</button>
+            <button className="btn btn-primary btn-sm all-center">
+              <IoMdExit className="sidebar-profile-icon" />
+              Login
+            </button>
           </SidebarProfile>
 
           {sidebarLinks.map((link) => (
