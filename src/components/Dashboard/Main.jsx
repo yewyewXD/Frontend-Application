@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
+import AccountSetting from "./SettingContent/Account";
+import UserSetting from "./SettingContent/User";
 
 const MainHeading = styled.h1`
   font-size: 22px;
@@ -67,6 +69,12 @@ const MainCardContent = styled.div`
 `;
 
 export default function Feed() {
+  const [setting, setSetting] = useState("account");
+
+  function changeSettingContent(content) {
+    setSetting(content);
+  }
+
   return (
     <div className="dashboard-main">
       <MainHeading className="main-heading">User Profile Setting</MainHeading>
@@ -77,35 +85,25 @@ export default function Feed() {
 
       <MainCard className="main-card">
         <div className="main-card-tabs all-center">
-          <div className="account-setting-tab active">Account Setting</div>
-          <div className="user-setting-tab">User Setting</div>
+          <div
+            className={`account-setting-tab ${
+              setting === "account" && "active"
+            }`}
+            onClick={() => changeSettingContent("account")}
+          >
+            Account Setting
+          </div>
+          <div
+            className={`user-setting-tab ${setting === "user" && "active"}`}
+            onClick={() => changeSettingContent("user")}
+          >
+            User Setting
+          </div>
         </div>
 
         <MainCardContent className="main-card-content">
-          <form className="account-setting">
-            <div className="form-group">
-              <label htmlFor="email" className="form-label">
-                <b>Email</b>
-              </label>
-              <input type="text" className="form-input" />
-            </div>
-
-            <div className="form-group">
-              <label htmlFor="password" className="form-label">
-                <b>Password</b>
-              </label>
-              <input type="password" className="form-input" />
-            </div>
-
-            <div className="form-group">
-              <label htmlFor="passwordRepeat" className="form-label">
-                <b>Password Repeat</b>
-              </label>
-              <input type="password" className="form-input" />
-            </div>
-
-            <button className="btn btn-primary btn-md">Save Changes</button>
-          </form>
+          {setting === "account" && <AccountSetting />}
+          {setting === "user" && <UserSetting />}
         </MainCardContent>
       </MainCard>
     </div>
