@@ -39,14 +39,10 @@ h6 {
 }
 
 .btn {
-  border-radius: 5px;
   border: none;
   outline: none;
   cursor: pointer;
   transition: 0.3s;
-  &:hover {
-    opacity: 0.8;
-  }
 }
 
 .btn-primary {
@@ -57,4 +53,18 @@ h6 {
 .btn-sm {
   font-size: 14px;
   padding: 5px 10px;
+  border-radius: 5px;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.btn-md {
+  font-size: 16px;
+  padding: 0.625em 1em;
+  border: 1px solid $themeColor;
+  &:hover {
+    background: white;
+    color: $themeColor;
+  }
 }
