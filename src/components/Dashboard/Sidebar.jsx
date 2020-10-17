@@ -129,7 +129,7 @@ export default function Sidebar() {
           </SidebarProfile>
 
           {sidebarLinks.map((link) => (
-            <SidebarLink href={link.path} key={link.text}>
+            <SidebarLink href={link.path} key={link.text} target="_blank">
               {link.text}
             </SidebarLink>
           ))}
@@ -153,7 +153,12 @@ export default function Sidebar() {
 
         <FooterSocialIcons className="footer-social-icons">
           {footerSocialIcons.map((socialIcon) => (
-            <a className="footer-social-icon" href={socialIcon.path}>
+            <a
+              className="footer-social-icon"
+              href={socialIcon.path}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               {socialIcon.icon}
             </a>
           ))}
