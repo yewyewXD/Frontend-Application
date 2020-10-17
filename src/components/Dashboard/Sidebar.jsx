@@ -15,11 +15,18 @@ const SidebarProfile = styled.div`
   align-items: center;
   margin-bottom: 1rem;
 
-  img {
+  .profile-image {
     height: 90px;
     width: 90px;
     border-radius: 50%;
     margin-right: 1rem;
+  }
+
+  @media (max-width: 1300px) {
+    .profile-image {
+      height: 80px;
+      width: 80px;
+    }
   }
 
   .sidebar-profile-icon {
@@ -114,7 +121,7 @@ export default function Sidebar() {
       <SidebarContentContainer className="sidebar-content-container">
         <div className="sidebar-content">
           <SidebarProfile className="sidebar-profile">
-            <img src={profileAvatar} alt="" />
+            <img src={profileAvatar} alt="" className="profile-image" />
             <button className="btn btn-primary btn-sm all-center">
               <IoMdExit className="sidebar-profile-icon" />
               Login

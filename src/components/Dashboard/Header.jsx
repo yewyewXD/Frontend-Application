@@ -26,6 +26,10 @@ const NavbarContainer = styled.div`
   @media (max-width: 1500px) {
     padding: 0.5rem 5rem;
   }
+
+  @media (max-width: 1300px) {
+    padding: 0.5rem 2rem;
+  }
 `;
 
 const NavbarBrand = styled.a`

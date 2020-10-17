@@ -51,3 +51,26 @@
     }
   }
 }
+
+@media (max-width: 1300px) {
+  .dashboard {
+    .dashboard-container {
+      margin: 0 2rem;
+    }
+    .dashboard-sidebar {
+      left: 2rem;
+    }
+
+    .dashboard-main-container {
+      .dashboard-main {
+        width: 97%;
+        padding-right: 0;
+      }
+
+      .dashboard-news {
+        display: none;
+        width: 0%;
+      }
+    }
+  }
+}
