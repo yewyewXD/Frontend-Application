@@ -12,6 +12,8 @@ function AccountSetting(props) {
   const [passwordRepeat, setPasswordRepeat] = useState("");
   const [modalOpened, setModalOpened] = useState(false);
   const [pwStrengthColor, setPwStrengthColor] = useState("red");
+  const [pwShown, setPwShown] = useState(false);
+  const [pwRepeatShown, setPwRepeatShown] = useState(false);
 
   const regexCheck = (regex, value) => regex.test(value);
 
@@ -118,6 +120,13 @@ function AccountSetting(props) {
     }
   }
 
+  function toggleViewPw() {
+    setPwShown(!pwShown);
+  }
+  function toggleViewPwRepeat() {
+    setPwRepeatShown(!pwRepeatShown);
+  }
+
   return (
     <form className="account-setting" onSubmit={submitAccountSetting}>
       <div className="form-group">
@@ -142,11 +151,14 @@ function AccountSetting(props) {
           style={DYNAMIC_STRENGTH_METER_STYLE}
         ></div>
         <input
-          type="password"
+          type={pwShown ? "text" : "password"}
           className="form-input"
           value={password}
           onChange={handlePwValidation}
         />
+        <span className="pw-toggle-view-btn" onClick={toggleViewPw}>
+          {pwShown ? "HIDE" : "SHOW"}
+        </span>
         {pwErrMsg && <div className="password-error-message">{pwErrMsg}</div>}
       </div>
 
@@ -155,11 +167,14 @@ function AccountSetting(props) {
           <b>Password Repeat</b>
         </label>
         <input
-          type="password"
+          type={pwShown ? "text" : "password"}
           className="form-input"
           value={passwordRepeat}
           onChange={(e) => setPasswordRepeat(e.target.value)}
         />
+        <span className="pw-toggle-view-btn" onClick={toggleViewPwRepeat}>
+          {pwRepeatShown ? "HIDE" : "SHOW"}
+        </span>
       </div>
 
       <button className="btn btn-primary btn-md" type="submit">
