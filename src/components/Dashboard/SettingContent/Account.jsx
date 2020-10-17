@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
 import { updateAccountInfo } from "../../../redux/actions/UserProfile";
-import styled from "styled-components";
 import InformModal from "../../Popups/InformModal";
 
 function AccountSetting(props) {
@@ -12,31 +11,15 @@ function AccountSetting(props) {
   const [password, setPassword] = useState("");
   const [passwordRepeat, setPasswordRepeat] = useState("");
   const [modalOpened, setModalOpened] = useState(false);
-
-  const pwStrengthColor = () => {
-    if (pwStrengthScore === 1) {
-      return "red";
-    } else if (pwStrengthScore === 2) {
-      return "orangered";
-    } else if (pwStrengthScore === 3) {
-      return "orange";
-    } else if (pwStrengthScore === 4) {
-      return "green";
-    }
-  };
+  const [pwStrengthColor, setPwStrengthColor] = useState("red");
 
   const regexCheck = (regex, value) => regex.test(value);
 
-  const PwStrengthMeter = styled.div`
-    display: ${password.length > 0 ? "block" : "none"};
-    transition: 0.3s;
-    height: 5px;
-    width: ${pwStrengthScore * 15}%;
-    padding: 0 10px;
-    border-radius: 5px;
-    background: ${pwStrengthColor};
-    margin-bottom: 10px;
-  `;
+  const DYNAMIC_STRENGTH_METER_STYLE = {
+    display: password.length > 0 ? "block" : "none",
+    width: `${pwStrengthScore * 15}%`,
+    backgroundColor: pwStrengthColor,
+  };
 
   function submitAccountSetting(e) {
     e.preventDefault();
@@ -123,6 +106,16 @@ function AccountSetting(props) {
     }
 
     setPwStrengthScore(pwStrengthCount);
+
+    if (pwStrengthCount === 1) {
+      setPwStrengthColor("red");
+    } else if (pwStrengthCount === 2) {
+      setPwStrengthColor("orangered");
+    } else if (pwStrengthCount === 3) {
+      setPwStrengthColor("orange");
+    } else if (pwStrengthCount === 4) {
+      setPwStrengthColor("green");
+    }
   }
 
   return (
@@ -144,7 +137,10 @@ function AccountSetting(props) {
         <label htmlFor="password" className="form-label">
           <b>Password</b>
         </label>
-        <PwStrengthMeter className="pw-strength-meter"></PwStrengthMeter>
+        <div
+          className="pw-strength-meter"
+          style={DYNAMIC_STRENGTH_METER_STYLE}
+        ></div>
         <input
           type="password"
           className="form-input"
