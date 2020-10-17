@@ -17,6 +17,8 @@ function AccountSetting(props) {
     } else if (pwStrengthScore === 2) {
       return "orangered";
     } else if (pwStrengthScore === 3) {
+      return "orange";
+    } else if (pwStrengthScore === 4) {
       return "green";
     }
   };
@@ -27,7 +29,7 @@ function AccountSetting(props) {
     display: ${password.length > 0 ? "block" : "none"};
     transition: 0.3s;
     height: 5px;
-    width: ${pwStrengthScore * 20}%;
+    width: ${pwStrengthScore * 15}%;
     padding: 0 10px;
     border-radius: 5px;
     background: ${pwStrengthColor};
@@ -44,7 +46,7 @@ function AccountSetting(props) {
       clearErrMsg();
       return;
     }
-    if (regexCheck(emailRegex, email)) {
+    if (!regexCheck(emailRegex, email)) {
       setErrMsg("Email is invalid");
       clearErrMsg();
       return;
@@ -57,6 +59,12 @@ function AccountSetting(props) {
 
     if (email === props.email && password === props.password) {
       setErrMsg("You did not edit any field");
+      clearErrMsg();
+      return;
+    }
+
+    if (pwStrengthScore !== 4) {
+      setErrMsg("Password is not strong enough");
       clearErrMsg();
       return;
     }
@@ -74,54 +82,45 @@ function AccountSetting(props) {
   }
 
   function handlePwValidation(e) {
+    let pwStrengthCount = 0;
     const pwValue = e.target.value;
     setPassword(pwValue);
+    if (pwErrMsg) {
+      setPwErrMsg("");
+    }
     const lowercaseRegex = /^(?=.*[a-z])/;
     const uppercaseRegex = /^(?=.*[A-Z])/;
     const specialCharRegex = /^(?=.*[!@#$%^&*])/;
-    if (pwValue.length > 0) {
-      if (!regexCheck(lowercaseRegex, pwValue)) {
-        setPwErrMsg("Please include at least one lowercase character");
-      } else if (!regexCheck(uppercaseRegex, pwValue)) {
-        setPwErrMsg("Please include at least one uppercase character");
-      } else if (!regexCheck(specialCharRegex, pwValue)) {
-        setPwErrMsg("Please include at least one special character");
-      } else {
-        setPwErrMsg("");
-      }
-    } else {
+
+    if (!pwValue) {
       setPwErrMsg("");
+    } else {
+      if (regexCheck(specialCharRegex, pwValue)) {
+        pwStrengthCount++;
+      } else {
+        setPwErrMsg("Please use at least one special character");
+      }
+
+      if (regexCheck(uppercaseRegex, pwValue)) {
+        pwStrengthCount++;
+      } else {
+        setPwErrMsg("Please use at least one uppercase character");
+      }
+
+      if (pwValue.trim().length > 8) {
+        pwStrengthCount++;
+      } else {
+        setPwErrMsg("Please enter at least 8 characters");
+      }
+
+      if (regexCheck(lowercaseRegex, pwValue)) {
+        pwStrengthCount++;
+      } else {
+        setPwErrMsg("Please use at least one lowercase character");
+      }
     }
 
-    if (
-      regexCheck(lowercaseRegex, pwValue) ||
-      regexCheck(uppercaseRegex, pwValue) ||
-      regexCheck(specialCharRegex, pwValue)
-    ) {
-      setPwStrengthScore(1);
-    }
-
-    if (
-      (regexCheck(lowercaseRegex, pwValue) &&
-        (regexCheck(uppercaseRegex, pwValue) ||
-          regexCheck(specialCharRegex, pwValue))) ||
-      (regexCheck(uppercaseRegex, pwValue) &&
-        (regexCheck(lowercaseRegex, pwValue) ||
-          regexCheck(specialCharRegex, pwValue))) ||
-      (regexCheck(specialCharRegex, pwValue) &&
-        (regexCheck(lowercaseRegex, pwValue) ||
-          regexCheck(uppercaseRegex, pwValue)))
-    ) {
-      setPwStrengthScore(2);
-    }
-
-    if (
-      regexCheck(lowercaseRegex, pwValue) &&
-      regexCheck(uppercaseRegex, pwValue) &&
-      regexCheck(specialCharRegex, pwValue)
-    ) {
-      setPwStrengthScore(3);
-    }
+    setPwStrengthScore(pwStrengthCount);
   }
 
   return (

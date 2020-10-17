@@ -75,6 +75,7 @@ const MainCardContent = styled.div`
     margin-bottom: 24px;
   }
   .password-error-message {
+    margin-top: 5px;
     font-size: 12px;
     color: red;
   }
