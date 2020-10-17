@@ -31,6 +31,7 @@ const NavbarContainer = styled.div`
   }
   @media (max-width: 1100px) {
     padding: 0.5rem 3rem;
+    justify-content: space-between;
   }
 `;
 
@@ -41,6 +42,12 @@ const NavbarBrand = styled.a`
   width: 19%;
   img {
     width: 50%;
+  }
+
+  @media (max-width: 1100px) {
+    img {
+      width: 90px;
+    }
   }
 `;
 
@@ -69,6 +76,8 @@ const NavSearch = styled.form`
   }
   @media (max-width: 1100px) {
     justify-content: center;
+    margin: 0;
+    width: 400px;
   }
 
   .search-btn {
