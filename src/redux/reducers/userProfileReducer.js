@@ -4,13 +4,13 @@ import {
 } from "../actions/UserProfile/types";
 
 const initialState = {
-  email: "tester@mail.com",
-  password: "tester",
+  email: "johndoe@mail.com",
+  password: "johndoe",
 
-  firstName: "First",
-  lastName: "Last",
-  address: "test address",
-  country: "test country",
+  firstName: "John",
+  lastName: "Doe",
+  address: "Jülicher Straße 72a c/o digitalHUB, 52070 Aachen",
+  country: "Germany",
 };
 
 export default function (state = initialState, action) {
