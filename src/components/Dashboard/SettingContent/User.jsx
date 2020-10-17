@@ -86,11 +86,13 @@ function UserSetting(props) {
         </label>
         <select onChange={(e) => setCountry(e.target.value)}>
           <option value={country}>{country}</option>
-          {countryOptions.map((countryOption) => (
-            <option key={countryOption} value={countryOption}>
-              {countryOption}
-            </option>
-          ))}
+          {countryOptions
+            .filter((countryOption) => countryOption !== country)
+            .map((newCountryOption) => (
+              <option key={newCountryOption} value={newCountryOption}>
+                {newCountryOption}
+              </option>
+            ))}
         </select>
       </div>
 
