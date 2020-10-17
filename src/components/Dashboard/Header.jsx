@@ -1,6 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 import logo from "../../images/innoloft_white_logo.svg";
+import { GoSearch } from "react-icons/go";
+import { CgChevronDown } from "react-icons/cg";
+import { IoMdNotificationsOutline } from "react-icons/io";
+import profileAvatar from "../../images/avatar.jpg";
 
 const Navbar = styled.nav`
   position: fixed;
@@ -41,15 +45,19 @@ const NavSearch = styled.form`
   justify-content: flex-start;
   margin: 0 30px;
 
-  input {
+  .search-input {
     padding: 0.4rem 0.6rem;
     width: 100%;
     border-radius: 10px;
   }
 
-  button {
+  .search-btn {
+    font-size: 18px;
     position: absolute;
+    padding: 5px;
     margin-right: 1rem;
+    cursor: pointer;
+    background: #f4f4f4;
   }
 `;
 
@@ -65,13 +73,19 @@ const NavbarNav = styled.div`
   justify-content: flex-end;
   align-items: center;
   width: 26%;
-  background: white;
 
   .language-toggler,
   .notification,
   .profile {
-    width: 30%;
+    cursor: pointer;
+    margin: 0 10px;
     color: white;
+  }
+
+  .profile img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
   }
 `;
 
@@ -90,22 +104,28 @@ export default function Header() {
         <NavSearch className="nav-search">
           <NavSearchContainer className="nav-search-container">
             <input
-              class="form-control mr-sm-2"
+              class="search-input"
               type="text"
               placeholder="Enter interests, keywords, company name, etc..."
             />
-            <button class="search-btn" type="submit">
-              Search
+            <button class="search-btn btn" type="submit">
+              <GoSearch />
             </button>
           </NavSearchContainer>
         </NavSearch>
 
         <NavbarNav className="navbar-nav">
-          <div className="language-toggler">lang</div>
+          <div className="language-toggler all-center">
+            EN <CgChevronDown fontSize="1.2rem" />
+          </div>
 
-          <div className="notification">not</div>
+          <div className="notification all-center">
+            <IoMdNotificationsOutline fontSize="1.5rem" />
+          </div>
 
-          <div className="profile">pro</div>
+          <div className="profile all-center">
+            <img src={profileAvatar} alt="" />
+          </div>
         </NavbarNav>
       </NavbarContainer>
     </Navbar>
