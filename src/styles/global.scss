@@ -32,6 +32,10 @@ input:focus {
   background: #dfdede;
 }
 
+select {
+  width: 63%;
+}
+
 h1,
 h2,
 h3,
@@ -99,8 +103,10 @@ h6 {
 }
 
 @media (max-width: 576px) {
-  input,
-  select {
+  input {
     width: 90%;
+  }
+  select {
+    width: 95%;
   }
 }
