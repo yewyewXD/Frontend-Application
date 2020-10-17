@@ -3,35 +3,48 @@ import { connect } from "react-redux";
 import { updateAccountInfo } from "../../../redux/actions/UserProfile";
 import styled from "styled-components";
 
-const PwStrengthMeter = styled.div`
-  height: 5px;
-  width: 60%;
-  padding: 0 10px;
-  border-radius: 5px;
-  background: grey;
-  margin-bottom: 10px;
-`;
-
 function AccountSetting(props) {
   const [errMsg, setErrMsg] = useState("");
+  const [pwStrengthScore, setPwStrengthScore] = useState(0);
   const [pwErrMsg, setPwErrMsg] = useState("");
   const [email, setEmail] = useState(props.email);
   const [password, setPassword] = useState("");
   const [passwordRepeat, setPasswordRepeat] = useState("");
 
+  const pwStrengthColor = () => {
+    if (pwStrengthScore === 1) {
+      return "red";
+    } else if (pwStrengthScore === 2) {
+      return "orangered";
+    } else if (pwStrengthScore === 3) {
+      return "green";
+    }
+  };
+
+  const regexCheck = (regex, value) => regex.test(value);
+
+  const PwStrengthMeter = styled.div`
+    display: ${password.length > 0 ? "block" : "none"};
+    transition: 0.3s;
+    height: 5px;
+    width: ${pwStrengthScore * 20}%;
+    padding: 0 10px;
+    border-radius: 5px;
+    background: ${pwStrengthColor};
+    margin-bottom: 10px;
+  `;
+
   function submitAccountSetting(e) {
     e.preventDefault();
     // Validation
     const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    const pwLowerCaseRegex = /^(?=.*[a-z])/;
-    const pwUpperCaseRegex = /^(?=.*[A-Z])/;
-    const pwSpecialCharRegex = /^(?=.*[!@#$%^&*])/;
+
     if (!email || !password || !passwordRepeat) {
       setErrMsg("Please fill in all fields");
       clearErrMsg();
       return;
     }
-    if (!emailRegex.test(email)) {
+    if (regexCheck(emailRegex, email)) {
       setErrMsg("Email is invalid");
       clearErrMsg();
       return;
@@ -41,23 +54,7 @@ function AccountSetting(props) {
       clearErrMsg();
       return;
     }
-    if (!pwLowerCaseRegex.test(password)) {
-      setPwErrMsg("Please include at least one lowercase character");
-      clearErrMsg();
-      return;
-    }
 
-    if (!pwUpperCaseRegex.test(password)) {
-      setPwErrMsg("Please include at least one uppercase character");
-      clearErrMsg();
-      return;
-    }
-
-    if (!pwSpecialCharRegex.test(password)) {
-      setPwErrMsg("Please include at least one special character");
-      clearErrMsg();
-      return;
-    }
     if (email === props.email && password === props.password) {
       setErrMsg("You did not edit any field");
       clearErrMsg();
@@ -73,8 +70,58 @@ function AccountSetting(props) {
   function clearErrMsg() {
     setTimeout(() => {
       setErrMsg("");
-      setPwErrMsg("");
     }, 3000);
+  }
+
+  function handlePwValidation(e) {
+    const pwValue = e.target.value;
+    setPassword(pwValue);
+    const lowercaseRegex = /^(?=.*[a-z])/;
+    const uppercaseRegex = /^(?=.*[A-Z])/;
+    const specialCharRegex = /^(?=.*[!@#$%^&*])/;
+    if (pwValue.length > 0) {
+      if (!regexCheck(lowercaseRegex, pwValue)) {
+        setPwErrMsg("Please include at least one lowercase character");
+      } else if (!regexCheck(uppercaseRegex, pwValue)) {
+        setPwErrMsg("Please include at least one uppercase character");
+      } else if (!regexCheck(specialCharRegex, pwValue)) {
+        setPwErrMsg("Please include at least one special character");
+      } else {
+        setPwErrMsg("");
+      }
+    } else {
+      setPwErrMsg("");
+    }
+
+    if (
+      regexCheck(lowercaseRegex, pwValue) ||
+      regexCheck(uppercaseRegex, pwValue) ||
+      regexCheck(specialCharRegex, pwValue)
+    ) {
+      setPwStrengthScore(1);
+    }
+
+    if (
+      (regexCheck(lowercaseRegex, pwValue) &&
+        (regexCheck(uppercaseRegex, pwValue) ||
+          regexCheck(specialCharRegex, pwValue))) ||
+      (regexCheck(uppercaseRegex, pwValue) &&
+        (regexCheck(lowercaseRegex, pwValue) ||
+          regexCheck(specialCharRegex, pwValue))) ||
+      (regexCheck(specialCharRegex, pwValue) &&
+        (regexCheck(lowercaseRegex, pwValue) ||
+          regexCheck(uppercaseRegex, pwValue)))
+    ) {
+      setPwStrengthScore(2);
+    }
+
+    if (
+      regexCheck(lowercaseRegex, pwValue) &&
+      regexCheck(uppercaseRegex, pwValue) &&
+      regexCheck(specialCharRegex, pwValue)
+    ) {
+      setPwStrengthScore(3);
+    }
   }
 
   return (
@@ -101,7 +148,7 @@ function AccountSetting(props) {
           type="password"
           className="form-input"
           value={password}
-          onChange={(e) => setPassword(e.target.value)}
+          onChange={handlePwValidation}
         />
         {pwErrMsg && <div className="password-error-message">{pwErrMsg}</div>}
       </div>
