@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { connect } from "react-redux";
 import { updateAccountInfo } from "../../../redux/actions/UserProfile";
 import styled from "styled-components";
-import ConfirmModal from "../../Popups/ConfirmModal";
+import InformModal from "../../Popups/InformModal";
 
 function AccountSetting(props) {
   const [errMsg, setErrMsg] = useState("");
@@ -170,7 +170,7 @@ function AccountSetting(props) {
         Save Changes
       </button>
 
-      <ConfirmModal
+      <InformModal
         open={modalOpened}
         closeModal={() => setModalOpened(false)}
       />

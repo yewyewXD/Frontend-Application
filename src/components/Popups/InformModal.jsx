@@ -37,7 +37,7 @@ const Modal = styled.div`
   }
 `;
 
-export default function ConfirmModal({ open, closeModal }) {
+export default function InformModal({ open, closeModal }) {
   if (!open) return null;
 
   return ReactDom.createPortal(
