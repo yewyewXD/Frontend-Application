@@ -168,11 +168,11 @@ export default function Header() {
         <NavSearch className="nav-search">
           <NavSearchContainer className="nav-search-container">
             <input
-              class="search-input"
+              className="search-input"
               type="text"
               placeholder="Enter interests, keywords, company name, etc..."
             />
-            <button class="search-btn btn" type="submit">
+            <button className="search-btn btn" type="submit">
               <GoSearch />
             </button>
           </NavSearchContainer>

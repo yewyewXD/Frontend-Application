@@ -154,6 +154,7 @@ export default function Sidebar() {
         <FooterSocialIcons className="footer-social-icons">
           {footerSocialIcons.map((socialIcon) => (
             <a
+              key={socialIcon.path}
               className="footer-social-icon"
               href={socialIcon.path}
               target="_blank"
