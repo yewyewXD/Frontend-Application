@@ -48,6 +48,10 @@ const MainCardContent = styled.div`
     margin-top: 10px;
   }
 
+  .form-input:focus {
+    border-bottom: 3px solid #272e71;
+  }
+
   .error-message {
     font-weight: 600;
     background: #ff8f8f;
