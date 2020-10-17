@@ -38,6 +38,8 @@ function UserSetting(props) {
     }, 3000);
   }
 
+  const countryOptions = ["Germany", "Austria", "Switzerland"];
+
   return (
     <form className="user-setting" onSubmit={submitUserSetting}>
       <div className="form-group">
@@ -72,6 +74,7 @@ function UserSetting(props) {
         <input
           type="text"
           className="form-input"
+          placeholder="street, house number, postal code"
           value={address}
           onChange={(e) => setAddress(e.target.value)}
         />
@@ -81,12 +84,14 @@ function UserSetting(props) {
         <label htmlFor="country" className="form-label">
           <b>Country</b>
         </label>
-        <input
-          type="text"
-          className="form-input"
-          value={country}
-          onChange={(e) => setCountry(e.target.value)}
-        />
+        <select onChange={(e) => setCountry(e.target.value)}>
+          <option value={country}>{country}</option>
+          {countryOptions.map((countryOption) => (
+            <option key={countryOption} value={countryOption}>
+              {countryOption}
+            </option>
+          ))}
+        </select>
       </div>
 
       <button className="btn btn-primary btn-md">Save Changes</button>
