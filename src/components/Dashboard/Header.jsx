@@ -54,8 +54,7 @@ const NavSearch = styled.form`
   .search-btn {
     font-size: 18px;
     position: absolute;
-    padding: 5px;
-    margin-right: 1rem;
+    margin: 5px 1rem 0 0;
     cursor: pointer;
     background: #f4f4f4;
   }
