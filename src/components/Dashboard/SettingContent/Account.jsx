@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { connect } from "react-redux";
 import { updateAccountInfo } from "../../../redux/actions/UserProfile";
 import styled from "styled-components";
+import ConfirmModal from "../../Popups/ConfirmModal";
 
 function AccountSetting(props) {
   const [errMsg, setErrMsg] = useState("");
@@ -10,6 +11,7 @@ function AccountSetting(props) {
   const [email, setEmail] = useState(props.email);
   const [password, setPassword] = useState("");
   const [passwordRepeat, setPasswordRepeat] = useState("");
+  const [modalOpened, setModalOpened] = useState(false);
 
   const pwStrengthColor = () => {
     if (pwStrengthScore === 1) {
@@ -164,7 +166,18 @@ function AccountSetting(props) {
         />
       </div>
 
-      <button className="btn btn-primary btn-md">Save Changes</button>
+      <button
+        className="btn btn-primary btn-md"
+        type="button"
+        onClick={() => setModalOpened(true)}
+      >
+        Save Changes
+      </button>
+
+      <ConfirmModal
+        open={modalOpened}
+        closeModal={() => setModalOpened(false)}
+      />
     </form>
   );
 }
