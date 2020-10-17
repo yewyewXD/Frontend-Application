@@ -74,6 +74,10 @@ const MainCardContent = styled.div`
     padding: 10px;
     margin-bottom: 24px;
   }
+  .password-error-message {
+    font-size: 12px;
+    color: red;
+  }
 `;
 
 export default function Feed() {
