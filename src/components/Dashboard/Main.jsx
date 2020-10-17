@@ -44,25 +44,6 @@ const MainCard = styled.div`
 const MainCardContent = styled.div`
   padding: 30px 25px;
 
-  .form-group {
-    margin-bottom: 24px;
-  }
-  .form-label {
-    display: block;
-    margin-bottom: 7px;
-  }
-  .form-input {
-    font-size: 16px;
-    padding: 10px;
-    width: 60%;
-    border: none;
-    outline: none;
-    background: #f4f4f4;
-    &:focus {
-      border-bottom: 3px solid #272e71;
-      background: #dfdede;
-    }
-  }
   button {
     margin-top: 10px;
   }
