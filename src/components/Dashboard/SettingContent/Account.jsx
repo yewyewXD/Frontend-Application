@@ -167,7 +167,7 @@ function AccountSetting(props) {
           <b>Password Repeat</b>
         </label>
         <input
-          type={pwShown ? "text" : "password"}
+          type={pwRepeatShown ? "text" : "password"}
           className="form-input"
           value={passwordRepeat}
           onChange={(e) => setPasswordRepeat(e.target.value)}
