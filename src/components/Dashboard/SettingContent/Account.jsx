@@ -74,7 +74,7 @@ function AccountSetting(props) {
     props.updateAccountInfo(email, password);
     setPassword("");
     setPasswordRepeat("");
-    alert("success!");
+    setModalOpened(true);
   }
 
   function clearErrMsg() {
@@ -166,11 +166,7 @@ function AccountSetting(props) {
         />
       </div>
 
-      <button
-        className="btn btn-primary btn-md"
-        type="button"
-        onClick={() => setModalOpened(true)}
-      >
+      <button className="btn btn-primary btn-md" type="submit">
         Save Changes
       </button>
 

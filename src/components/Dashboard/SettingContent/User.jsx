@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
 import { updateUserInfo } from "../../../redux/actions/UserProfile";
+import ConfirmModal from "../../Popups/ConfirmModal";
 
 function UserSetting(props) {
   const [errMsg, setErrMsg] = useState("");
@@ -8,6 +9,7 @@ function UserSetting(props) {
   const [lastName, setLastName] = useState(props.lastName);
   const [address, setAddress] = useState(props.address);
   const [country, setCountry] = useState(props.country);
+  const [modalOpened, setModalOpened] = useState(false);
 
   function submitUserSetting(e) {
     e.preventDefault();
@@ -29,7 +31,7 @@ function UserSetting(props) {
     }
 
     props.updateUserInfo(firstName, lastName, address, country);
-    alert("success");
+    setModalOpened(true);
   }
 
   function clearErrMsg() {
@@ -96,7 +98,14 @@ function UserSetting(props) {
         </select>
       </div>
 
-      <button className="btn btn-primary btn-md">Save Changes</button>
+      <button className="btn btn-primary btn-md" type="submit">
+        Save Changes
+      </button>
+
+      <ConfirmModal
+        open={modalOpened}
+        closeModal={() => setModalOpened(false)}
+      />
     </form>
   );
 }
