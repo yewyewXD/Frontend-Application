@@ -29,3 +29,25 @@
     }
   }
 }
+
+@media (max-width: 1700px) {
+  .dashboard {
+    .dashboard-container {
+      margin: 0 10rem;
+    }
+    .dashboard-sidebar {
+      left: 10rem;
+    }
+  }
+}
+
+@media (max-width: 1500px) {
+  .dashboard {
+    .dashboard-container {
+      margin: 0 5rem;
+    }
+    .dashboard-sidebar {
+      left: 5rem;
+    }
+  }
+}

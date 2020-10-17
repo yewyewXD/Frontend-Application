@@ -18,6 +18,14 @@ const NavbarContainer = styled.div`
   display: flex;
   margin: 0 auto;
   padding: 0.5rem 13rem;
+
+  @media (max-width: 1700px) {
+    padding: 0.5rem 10rem;
+  }
+
+  @media (max-width: 1500px) {
+    padding: 0.5rem 5rem;
+  }
 `;
 
 const NavbarBrand = styled.a`
