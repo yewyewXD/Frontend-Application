@@ -74,3 +74,18 @@
     }
   }
 }
+
+@media (max-width: 1100px) {
+  .dashboard {
+    .dashboard-container {
+      justify-content: center;
+    }
+    .dashboard-sidebar {
+      display: none;
+    }
+    .dashboard-main-container {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+}
