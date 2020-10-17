@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDom from "react-dom";
 import styled from "styled-components";
+import colorfulLogo from "../../images/innoloft_color_logo.svg";
 
 const ScreenOverlay = styled.div`
   position: fixed;
@@ -18,8 +19,22 @@ const Modal = styled.div`
   left: 50%;
   transform: translate(-50%, -50%);
   background: white;
-  padding: 50px;
+  padding: 20px;
   z-index: 1000;
+  border-radius: 5px;
+  text-align: center;
+
+  .colorful-logo {
+    width: 80%;
+  }
+
+  .close-modal-btn {
+    margin-top: 15px;
+  }
+
+  @media (max-width: 576px) {
+    width: 80vw;
+  }
 `;
 
 export default function ConfirmModal({ open, closeModal }) {
@@ -28,10 +43,14 @@ export default function ConfirmModal({ open, closeModal }) {
   return ReactDom.createPortal(
     <>
       <ScreenOverlay className="screen-overlay"></ScreenOverlay>
-      <Modal className="modal">
-        <h1>hi from confirm modal</h1>
-        <button onClick={closeModal} className="btn btn-primary btn-md">
-          Close Modal
+      <Modal className="modal all-center-column">
+        <img src={colorfulLogo} alt="" className="colorful-logo" />
+        <h2>Successfully updated!</h2>
+        <button
+          onClick={closeModal}
+          className="btn btn-primary btn-md close-modal-btn"
+        >
+          Close
         </button>
       </Modal>
     </>,
