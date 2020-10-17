@@ -13,11 +13,12 @@ body {
 .form-group {
   margin-bottom: 24px;
 }
-.form-label {
+label {
   display: block;
   margin-bottom: 7px;
 }
-.form-input {
+input,
+select {
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
   padding: 10px;
@@ -25,10 +26,11 @@ body {
   border: none;
   outline: none;
   background: #f4f4f4;
-  &:focus {
-    border-bottom: 3px solid #272e71;
-    background: #dfdede;
-  }
+}
+
+input:focus {
+  border-bottom: 3px solid $themeColor;
+  background: #dfdede;
 }
 
 h1,
