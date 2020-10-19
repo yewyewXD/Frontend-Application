@@ -16,12 +16,6 @@ body {
     margin-top: 10px;
   }
 
-  &__input {
-    &:focus {
-      border-bottom: 3px solid $themeColor;
-    }
-  }
-
   &__error-message {
     font-weight: 600;
     background: #ff8f8f;
@@ -35,24 +29,27 @@ body {
     color: red;
   }
 }
+
 label {
   display: block;
   margin-bottom: 7px;
 }
+
 input,
 select {
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
   padding: 10px;
-  width: 60%;
   border: none;
   outline: none;
   background: #f4f4f4;
 }
 
 input {
+  width: 60%;
   &:focus {
     background: #dfdede;
+    border-bottom: 3px solid $themeColor;
   }
 }
 
