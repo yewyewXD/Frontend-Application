@@ -1,27 +1,26 @@
 .dashboard {
   margin-top: 5rem;
-  .dashboard-container {
+  &__container {
     display: flex;
     justify-content: flex-end;
     margin: 0 13rem;
   }
 
-  .dashboard-sidebar {
+  &__sidebar {
     width: 16%;
     height: 88vh;
     position: fixed;
     left: 13rem;
   }
 
-  .dashboard-main-container {
+  &__content-wrapper {
     width: 79%;
     display: flex;
-    .dashboard-main {
+    .main-content {
       width: 62%;
       padding-right: 30px;
     }
-
-    .dashboard-news {
+    .side-content {
       margin-top: 97px;
       width: 33%;
       display: flex;
@@ -32,10 +31,11 @@
 
 @media (max-width: 1700px) {
   .dashboard {
-    .dashboard-container {
+    &__container {
       margin: 0 10rem;
     }
-    .dashboard-sidebar {
+
+    &__sidebar {
       left: 10rem;
     }
   }
@@ -43,10 +43,11 @@
 
 @media (max-width: 1500px) {
   .dashboard {
-    .dashboard-container {
+    &__container {
       margin: 0 5rem;
     }
-    .dashboard-sidebar {
+
+    &__sidebar {
       left: 5rem;
     }
   }
@@ -54,20 +55,20 @@
 
 @media (max-width: 1300px) {
   .dashboard {
-    .dashboard-container {
+    &__container {
       margin: 0 2rem;
     }
-    .dashboard-sidebar {
+
+    &__sidebar {
       left: 2rem;
     }
 
-    .dashboard-main-container {
-      .dashboard-main {
+    &__content-wrapper {
+      .main-content {
         width: 97%;
         padding-right: 0;
       }
-
-      .dashboard-news {
+      .side-content {
         display: none;
         width: 0%;
       }
@@ -77,13 +78,15 @@
 
 @media (max-width: 1100px) {
   .dashboard {
-    .dashboard-container {
+    &__container {
       justify-content: center;
     }
-    .dashboard-sidebar {
+
+    &__sidebar {
       display: none;
     }
-    .dashboard-main-container {
+
+    &__content-wrapper {
       width: 100%;
       justify-content: center;
     }

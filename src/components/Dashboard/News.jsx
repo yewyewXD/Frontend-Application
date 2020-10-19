@@ -39,7 +39,7 @@ const NewsCard = styled.div`
 
 export default function News() {
   return (
-    <div className="dashboard-news">
+    <div className="side-content">
       <NewsCard className="news-card">
         <div className="news-heading">Current Challenge</div>
         <img src={newsImage1} alt="" className="news-image" />

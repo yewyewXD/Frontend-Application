@@ -12,9 +12,9 @@ function App() {
       <Header />
 
       <main className="dashboard">
-        <div className="dashboard-container">
+        <div className="dashboard__container">
           <Sidebar />
-          <div className="dashboard-main-container">
+          <div className="dashboard__content-wrapper">
             <Main />
             <News />
           </div>

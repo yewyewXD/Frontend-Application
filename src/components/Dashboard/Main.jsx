@@ -74,7 +74,7 @@ export default function Feed() {
   }
 
   return (
-    <div className="dashboard-main">
+    <div className="main-content">
       <MainHeading className="main-heading">User Profile Setting</MainHeading>
 
       <MainSubheading className="main-subheading">

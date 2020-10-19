@@ -117,7 +117,7 @@ const footerSocialIcons = [
 
 export default function Sidebar() {
   return (
-    <div className="dashboard-sidebar">
+    <div className="dashboard__sidebar">
       <SidebarContentContainer className="sidebar-content-container">
         <div className="sidebar-content">
           <SidebarProfile className="sidebar-profile">
