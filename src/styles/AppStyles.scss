@@ -1,3 +1,92 @@
+@import "./variables.scss";
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: $themeColor;
+
+  &__container {
+    display: flex;
+    margin: 0 auto;
+    padding: 0.5rem 13rem;
+  }
+
+  &__brand {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 19%;
+    .logo-image {
+      width: 50%;
+    }
+  }
+
+  &__menu-toggler {
+    display: none !important;
+    margin-right: 20px;
+    color: white;
+    font-size: 1.5rem;
+  }
+
+  &__search {
+    width: 49%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0 30px;
+
+    .search-inner {
+      width: 70%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+
+      &__input-bar {
+        padding: 0.4rem 2.2rem 0.4rem 0.6rem;
+        width: 100%;
+        border-radius: 10px;
+      }
+
+      &__search-btn {
+        font-size: 18px;
+        position: absolute;
+        margin: 5px 0.6rem 0 0;
+        cursor: pointer;
+        background: none;
+      }
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 26%;
+
+    .language-toggler,
+    .notification,
+    .profile {
+      cursor: pointer;
+      color: white;
+    }
+
+    .notification {
+      margin: 0 15px;
+    }
+
+    .profile {
+      &__image {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
 .dashboard {
   margin-top: 5rem;
   &__container {

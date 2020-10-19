@@ -7,19 +7,7 @@ import { IoMdNotificationsOutline } from "react-icons/io";
 import { VscThreeBars } from "react-icons/vsc";
 import profileAvatar from "../../images/avatar.jpg";
 
-const Navbar = styled.nav`
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-`;
-
 const NavbarContainer = styled.div`
-  display: flex;
-  margin: 0 auto;
-  padding: 0.5rem 13rem;
-
   @media (max-width: 1700px) {
     padding: 0.5rem 10rem;
   }
@@ -39,30 +27,17 @@ const NavbarContainer = styled.div`
 `;
 
 const NavbarBrand = styled.a`
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  width: 19%;
-  img {
-    width: 50%;
-  }
-
   @media (max-width: 1100px) {
     width: min-content;
-    img {
+    .logo-image {
       width: 90px;
     }
   }
 `;
 
 const NavbarToggler = styled.span`
-  display: none;
-  margin-right: 20px;
-  color: white;
-  font-size: 1.5rem;
-
   @media (max-width: 1100px) {
-    display: flex;
+    display: flex !important;
   }
   @media (max-width: 768px) {
     margin-right: 0;
@@ -70,78 +45,30 @@ const NavbarToggler = styled.span`
 `;
 
 const NavSearch = styled.form`
-  width: 49%;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  margin: 0 30px;
-
-  .search-input {
-    padding: 0.4rem 2.2rem 0.4rem 0.6rem;
-    width: 100%;
-    border-radius: 10px;
-  }
-
-  .search-btn {
-    font-size: 18px;
-    position: absolute;
-    margin: 5px 0.6rem 0 0;
-    cursor: pointer;
-    background: none;
-  }
-
   @media (max-width: 1100px) {
     justify-content: center;
     margin: 0;
     width: min-content;
-    .search-input {
+    .search-inner__input-bar {
       width: 400px;
     }
   }
 
   @media (max-width: 768px) {
-    .search-input {
+    .search-inner__input-bar {
       width: 40vw;
     }
   }
   @media (max-width: 576px) {
     justify-content: flex-end;
 
-    .search-input {
+    .search-inner__input-bar {
       width: 30vw;
     }
   }
 `;
 
-const NavSearchContainer = styled.div`
-  width: 70%;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-`;
-
 const NavbarNav = styled.div`
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  width: 26%;
-
-  .language-toggler,
-  .notification,
-  .profile {
-    cursor: pointer;
-    color: white;
-  }
-
-  .notification {
-    margin: 0 15px;
-  }
-
-  .profile img {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-  }
   @media (max-width: 1100px) {
     width: min-content;
   }
@@ -155,30 +82,33 @@ const NavbarNav = styled.div`
 
 export default function Header() {
   return (
-    <Navbar className="navbar bg-theme">
-      <NavbarContainer className="navbar-container">
-        <NavbarToggler className="navbar-toggler btn all-center" type="button">
+    <nav className="navbar">
+      <NavbarContainer className="navbar__container">
+        <NavbarToggler
+          className="navbar__menu-toggler btn all-center"
+          type="button"
+        >
           <VscThreeBars />
         </NavbarToggler>
 
-        <NavbarBrand className="navbar-brand" href="/">
-          <img src={logo} alt="" />
+        <NavbarBrand className="navbar__brand" href="/">
+          <img src={logo} alt="" className="logo-image" />
         </NavbarBrand>
 
-        <NavSearch className="nav-search">
-          <NavSearchContainer className="nav-search-container">
+        <NavSearch className="navbar__search">
+          <div className="search-inner">
             <input
-              className="search-input"
+              className="search-inner__input-bar"
               type="text"
               placeholder="Enter interests, keywords, company name, etc..."
             />
-            <button className="search-btn btn" type="submit">
+            <button className="search-inner__search-btn btn" type="submit">
               <GoSearch />
             </button>
-          </NavSearchContainer>
+          </div>
         </NavSearch>
 
-        <NavbarNav className="navbar-nav">
+        <NavbarNav className="navbar__content">
           <div className="language-toggler all-center">
             EN <CgChevronDown fontSize="1.2rem" />
           </div>
@@ -188,10 +118,10 @@ export default function Header() {
           </div>
 
           <div className="profile all-center">
-            <img src={profileAvatar} alt="" />
+            <img src={profileAvatar} alt="" className="profile__image" />
           </div>
         </NavbarNav>
       </NavbarContainer>
-    </Navbar>
+    </nav>
   );
 }
