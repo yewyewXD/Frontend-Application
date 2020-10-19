@@ -89,6 +89,7 @@
 
 .dashboard {
   margin-top: 5rem;
+
   &__container {
     display: flex;
     justify-content: flex-end;
@@ -100,6 +101,69 @@
     height: 88vh;
     position: fixed;
     left: 13rem;
+    .sidebar-inner {
+      height: 83%;
+      border-bottom: solid 1px lightgrey;
+      overflow-y: auto;
+      &__profile {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+        .image {
+          height: 90px;
+          width: 90px;
+          border-radius: 50%;
+          margin-right: 1rem;
+        }
+        .btn {
+          &__exit-icon {
+            margin-right: 5px;
+          }
+        }
+      }
+      &__link {
+        display: block;
+        padding: 15px 10px;
+        transition: 0.3s;
+        text-decoration: none;
+        color: black;
+        cursor: pointer;
+        &:hover {
+          background: lightgrey;
+        }
+      }
+    }
+
+    .footer {
+      height: 17%;
+      padding: 1rem 0;
+      text-align: center;
+      &__copyright {
+        margin: 5px 0;
+        font-size: 12px;
+      }
+      &__links {
+        flex-wrap: wrap;
+        .footer-link {
+          text-decoration: none;
+          margin: 3px 7px;
+          color: grey;
+          &:hover {
+            color: $themeColor;
+          }
+        }
+      }
+      &__social-icons {
+        margin: 10px 0;
+        .social-icon {
+          margin: 0 5px;
+          color: grey;
+          &:hover {
+            color: $themeColor;
+          }
+        }
+      }
+    }
   }
 
   &__content-wrapper {
@@ -168,6 +232,14 @@
 
     &__sidebar {
       left: 2rem;
+      .sidebar-inner {
+        &__profile {
+          .image {
+            height: 80px;
+            width: 80px;
+          }
+        }
+      }
     }
 
     &__content-wrapper {
