@@ -130,20 +130,20 @@ function AccountSetting(props) {
   return (
     <form className="account-setting" onSubmit={submitAccountSetting}>
       <div className="form-group">
-        {errMsg && <div className="error-message">{errMsg}</div>}
-        <label htmlFor="email" className="form-label">
+        {errMsg && <div className="form-group__error-message">{errMsg}</div>}
+        <label htmlFor="email" className="form-group__label">
           <b>Email</b>
         </label>
         <input
           type="text"
-          className="form-input"
+          className="form-group__input"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
       </div>
 
       <div className="form-group">
-        <label htmlFor="password" className="form-label">
+        <label htmlFor="password" className="form-group__label">
           <b>Password</b>
         </label>
         <div
@@ -152,7 +152,7 @@ function AccountSetting(props) {
         ></div>
         <input
           type={pwShown ? "text" : "password"}
-          className="form-input"
+          className="form-group__input"
           value={password}
           onChange={handlePwValidation}
         />
@@ -163,12 +163,12 @@ function AccountSetting(props) {
       </div>
 
       <div className="form-group">
-        <label htmlFor="passwordRepeat" className="form-label">
+        <label htmlFor="passwordRepeat" className="form-group__label">
           <b>Password Repeat</b>
         </label>
         <input
           type={pwRepeatShown ? "text" : "password"}
-          className="form-input"
+          className="form-group__input"
           value={passwordRepeat}
           onChange={(e) => setPasswordRepeat(e.target.value)}
         />

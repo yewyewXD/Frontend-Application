@@ -1,70 +1,6 @@
 import React, { useState } from "react";
-import styled from "styled-components";
 import AccountSetting from "./SettingContent/Account";
 import UserSetting from "./SettingContent/User";
-
-const MainHeading = styled.h1`
-  font-size: 22px;
-  margin: 0 0 15px 0;
-`;
-
-const MainSubheading = styled.div`
-  font-size: 16px;
-  margin: 0 0 30px 0;
-  font-weight: 300;
-`;
-
-const MainCard = styled.div`
-  border-radius: 5px;
-  background: white;
-  box-shadow: lightgrey 0px 0px 5px;
-
-  .account-setting-tab,
-  .user-setting-tab {
-    transition: 0.3s;
-    cursor: pointer;
-    width: 50%;
-    border-radius: 5px 0 0 0;
-    text-align: center;
-    padding: 10px 0;
-    &.active {
-      background: #272e71;
-      color: white;
-    }
-    &:hover {
-      opacity: 0.8;
-    }
-  }
-
-  .user-setting-tab {
-    border-radius: 0 5px 0 0;
-  }
-`;
-
-const MainCardContent = styled.div`
-  padding: 30px 25px;
-
-  button {
-    margin-top: 10px;
-  }
-
-  .form-input:focus {
-    border-bottom: 3px solid #272e71;
-  }
-
-  .error-message {
-    font-weight: 600;
-    background: #ff8f8f;
-    color: white;
-    padding: 10px;
-    margin-bottom: 24px;
-  }
-  .password-error-message {
-    margin-top: 5px;
-    font-size: 12px;
-    color: red;
-  }
-`;
 
 export default function Feed() {
   const [setting, setSetting] = useState("account");
@@ -75,14 +11,14 @@ export default function Feed() {
 
   return (
     <div className="main-content">
-      <MainHeading className="main-heading">User Profile Setting</MainHeading>
+      <h1 className="main-content__heading">User Profile Setting</h1>
 
-      <MainSubheading className="main-subheading">
+      <div className="main-content__subheading">
         Edit you account and personal information here
-      </MainSubheading>
+      </div>
 
-      <MainCard className="main-card">
-        <div className="main-card-tabs all-center">
+      <div className="main-card">
+        <div className="main-card__tabs all-center">
           <div
             className={`account-setting-tab ${
               setting === "account" && "active"
@@ -99,11 +35,11 @@ export default function Feed() {
           </div>
         </div>
 
-        <MainCardContent className="main-card-content">
+        <div className="main-card__content">
           {setting === "account" && <AccountSetting />}
           {setting === "user" && <UserSetting />}
-        </MainCardContent>
-      </MainCard>
+        </div>
+      </div>
     </div>
   );
 }

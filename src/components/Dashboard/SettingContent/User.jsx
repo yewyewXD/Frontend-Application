@@ -45,37 +45,37 @@ function UserSetting(props) {
   return (
     <form className="user-setting" onSubmit={submitUserSetting}>
       <div className="form-group">
-        {errMsg && <div className="error-message">{errMsg}</div>}
-        <label htmlFor="firstName" className="form-label">
+        {errMsg && <div className="form-group__error-message">{errMsg}</div>}
+        <label htmlFor="firstName" className="form-group__label">
           <b>First Name</b>
         </label>
         <input
           type="text"
-          className="form-input"
+          className="form-group__input"
           value={firstName}
           onChange={(e) => setFirstName(e.target.value)}
         />
       </div>
 
       <div className="form-group">
-        <label htmlFor="lastName" className="form-label">
+        <label htmlFor="lastName" className="form-group__label">
           <b>Last Name</b>
         </label>
         <input
           type="text"
-          className="form-input"
+          className="form-group__input"
           value={lastName}
           onChange={(e) => setLastName(e.target.value)}
         />
       </div>
 
       <div className="form-group">
-        <label htmlFor="address" className="form-label">
+        <label htmlFor="address" className="form-group__label">
           <b>Address</b>
         </label>
         <input
           type="text"
-          className="form-input"
+          className="form-group__input"
           placeholder="street, house number, postal code"
           value={address}
           onChange={(e) => setAddress(e.target.value)}
@@ -83,7 +83,7 @@ function UserSetting(props) {
       </div>
 
       <div className="form-group">
-        <label htmlFor="country" className="form-label">
+        <label htmlFor="country" className="form-group__label">
           <b>Country</b>
         </label>
         <select onChange={(e) => setCountry(e.target.value)}>
