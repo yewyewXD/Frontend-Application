@@ -159,7 +159,7 @@ function AccountSetting(props) {
         <span className="pw-toggle-view-btn" onClick={toggleViewPw}>
           {pwShown ? "HIDE" : "SHOW"}
         </span>
-        {pwErrMsg && <div className="password-error-message">{pwErrMsg}</div>}
+        {pwErrMsg && <div className="input-error-message">{pwErrMsg}</div>}
       </div>
 
       <div className="form-group">
