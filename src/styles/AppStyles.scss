@@ -1,5 +1,6 @@
 @import "./variables.scss";
 
+// path: components/Dashboard/Header.jsx
 .navbar {
   position: fixed;
   top: 0;
@@ -87,6 +88,7 @@
   }
 }
 
+// path: App.js
 .dashboard {
   margin-top: 5rem;
 
@@ -96,6 +98,7 @@
     margin: 0 13rem;
   }
 
+  // path: components/Dashboard/Sidebar.jsx
   &__sidebar {
     width: 16%;
     height: 88vh;
@@ -169,6 +172,8 @@
   &__content-wrapper {
     width: 79%;
     display: flex;
+
+    // path: components/Dashboard/Main.jsx
     .main-content {
       width: 62%;
       padding-right: 30px;
@@ -213,6 +218,8 @@
         }
       }
     }
+
+    // path: components/Dashboard/News.jsx
     .side-content {
       margin-top: 97px;
       width: 33%;
@@ -252,17 +259,20 @@
 }
 
 @media (max-width: 1700px) {
+  // path: components/Dashboard/Header.jsx
   .navbar {
     &__container {
       padding: 0.5rem 10rem;
     }
   }
 
+  // path: App.js
   .dashboard {
     &__container {
       margin: 0 10rem;
     }
 
+    // path: components/Dashboard/Sidebar.jsx
     &__sidebar {
       left: 10rem;
     }
@@ -270,17 +280,20 @@
 }
 
 @media (max-width: 1500px) {
+  // path: components/Dashboard/Header.jsx
   .navbar {
     &__container {
       padding: 0.5rem 5rem;
     }
   }
 
+  // path: App.js
   .dashboard {
     &__container {
       margin: 0 5rem;
     }
 
+    // path: components/Dashboard/Sidebar.jsx
     &__sidebar {
       left: 5rem;
     }
@@ -288,17 +301,20 @@
 }
 
 @media (max-width: 1300px) {
+  // path: components/Dashboard/Header.jsx
   .navbar {
     &__container {
       padding: 0.5rem 2rem;
     }
   }
 
+  // path: App.js
   .dashboard {
     &__container {
       margin: 0 2rem;
     }
 
+    // path: components/Dashboard/Sidebar.jsx
     &__sidebar {
       left: 2rem;
       .sidebar-inner {
@@ -312,10 +328,13 @@
     }
 
     &__content-wrapper {
+      // path: components/Dashboard/Main.jsx
       .main-content {
         width: 97%;
         padding-right: 0;
       }
+
+      // path: components/Dashboard/News.jsx
       .side-content {
         display: none;
         width: 0%;
@@ -325,6 +344,7 @@
 }
 
 @media (max-width: 1100px) {
+  // path: components/Dashboard/Header.jsx
   .navbar {
     &__container {
       padding: 0.5rem 3rem;
@@ -355,11 +375,13 @@
     }
   }
 
+  // path: App.js
   .dashboard {
     &__container {
       justify-content: center;
     }
 
+    // path: components/Dashboard/Sidebar.jsx
     &__sidebar {
       display: none;
     }
@@ -372,6 +394,7 @@
 }
 
 @media (max-width: 768px) {
+  // path: components/Dashboard/Header.jsx
   .navbar {
     &__container {
       padding: 0.5rem;
@@ -395,6 +418,7 @@
 }
 
 @media (max-width: 576px) {
+  // path: components/Dashboard/Header.jsx
   .navbar {
     &__search {
       justify-content: flex-end;
